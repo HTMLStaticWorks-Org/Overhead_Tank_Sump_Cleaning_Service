@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard — AQUAGUARD Water Tank &amp; Sump Hygiene</title>
+  <meta name="description" content="Manage water storage tank cleaning visits, view hygiene inspection reports, set recurring 6-month service reminders, and access invoices in the AQUAGUARD customer portal.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('aquaguard_theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        var savedDir = localStorage.getItem('aquaguard_dir');
+        if (savedDir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="dash-body">
+  <a href="#dash-main" class="skip-link">Skip to dashboard content</a>
+
+  <!-- MOBILE / TABLET TOPBAR (Visible only <= 1024px) -->
+  <header class="dash-topbar" aria-label="Mobile Dashboard Header">
+    <a href="index.html" class="navbar__brand" aria-label="AQUAGUARD Home">
+      <img src="assets/icons/favicon.svg" alt="" class="navbar__brand-mark" width="40" height="40">
+      <div class="navbar__brand-text">
+        <span class="navbar__brand-title">AQUA<span>GUARD</span></span>
+        <span class="navbar__brand-sub">Tank &amp; Sump Hygiene</span>
+      </div>
+    </a>
+    <button type="button" class="navbar__hamburger" id="dashMobileToggle" aria-label="Open navigation sidebar" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- DASHBOARD APPLICATION LAYOUT -->
+  <div class="dash-app-layout">
+    
+    <!-- DASHBOARD MOBILE BACKDROP -->
+    <div class="dash-sidebar-backdrop" id="dashBackdrop" aria-hidden="true"></div>
+
+    <!-- LEFT SIDE-MENU FROM TOP TO BOTTOM -->
+    <aside class="dash-sidebar" id="dashSidebar" aria-label="Customer Dashboard Navigation">
+      
+      <!-- BRANDNAME RETAINED AT TOP-LEFT IN SAME POSITION -->
+      <div class="dash-sidebar__header">
+        <a href="index.html" class="navbar__brand" aria-label="AQUAGUARD Home">
+          <img src="assets/icons/favicon.svg" alt="" class="navbar__brand-mark" width="40" height="40">
+          <div class="navbar__brand-text">
+            <span class="navbar__brand-title">AQUA<span>GUARD</span></span>
+            <span class="navbar__brand-sub">Tank &amp; Sump Hygiene</span>
+          </div>
+        </a>
+        <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close sidebar menu">&times;</button>
+      </div>
+
+      <!-- CUSTOMER PROFILE SNIPPET -->
+      <div class="dash-sidebar__user">
+        <div class="dash-avatar">AS</div>
+        <div class="dash-user-meta">
+          <strong>Arvind Sharma</strong>
+          <span>Green Meadows RWA</span>
+        </div>
+      </div>
+
+      <!-- SIDEBAR MENUS -->
+      <nav class="dash-sidebar__nav" aria-label="Dashboard Tabs">
+        <button type="button" class="dash-nav-link is-active" data-dash-tab="booking" aria-selected="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Book Cleaning Visits</span>
+        </button>
+
+        <button type="button" class="dash-nav-link" data-dash-tab="reports" aria-selected="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span>View Service Reports</span>
+        </button>
+
+        <button type="button" class="dash-nav-link" data-dash-tab="reminders" aria-selected="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span>Recurring Reminders</span>
+        </button>
+
+        <button type="button" class="dash-nav-link" data-dash-tab="invoices" aria-selected="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          <span>Manage Invoices</span>
+        </button>
+      </nav>
+
+      <!-- SIDEBAR FOOTER WITH UTILITIES & LOGOUT BUTTON -->
+      <div class="dash-sidebar__footer">
+        <div class="dash-sidebar__toggles">
+          <!-- RTL Toggle Button -->
+          <button type="button" class="icon-btn rtl-toggle-btn" data-rtl-toggle aria-label="Toggle RTL layout" aria-pressed="false" title="Toggle RTL / LTR" style="flex:1;">RTL</button>
+          
+          <!-- Theme Toggle Button -->
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Switch theme" aria-pressed="false" title="Toggle Light/Dark Theme" style="flex:1;">
+            <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- LOGOUT BUTTON -->
+        <button type="button" class="dash-logout-btn" id="dashLogoutBtn" aria-label="Sign out of customer session">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          <span>Log Out</span>
+        </button>
+      </div>
+
+    </aside>
+
+    <!-- MAIN DASHBOARD CONTENT AREA -->
+    <main class="dash-main-area" id="dash-main">
+      
+      <!-- DASHBOARD HERO BANNER -->
+      <section class="dashboard-hero" aria-label="Customer Profile Summary">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; width: 100%;">
+          <div>
+            <div class="eyebrow" style="color: #7DD3FC; margin-bottom: 0.35rem;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              <span>Customer Water Hygiene Portal</span>
+            </div>
+            <h1>Welcome back, Arvind Sharma</h1>
+            <p>Green Meadows Residential Society &bull; Block A &amp; B Tanks + Main Underground Sump (40,000L Combined)</p>
+          </div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn--secondary btn--sm" style="border-color: rgba(255,255,255,0.3); color:#FFFFFF;">Site Support Enquiry</a>
+            <button type="button" class="btn btn--primary btn--sm" data-dash-tab="booking" onclick="document.querySelector('[data-dash-tab=\'booking\']').click();">
+              + Book Next Visit
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATS OVERVIEW CARDS (2 Cards per row on tablet & last odd card in center) -->
+      <div class="dashboard-stats-grid" role="region" aria-label="Water Hygiene Key Metrics">
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="dashboard-stat-info">
+            <strong>18 Nov 2026</strong>
+            <span>Next Recommended Cleaning</span>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <div class="dashboard-stat-info">
+            <strong>3 Storage Units</strong>
+            <span>2 Overhead + 1 Sump Pit</span>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <div class="dashboard-stat-info">
+            <strong>1.2 NTU</strong>
+            <span>Last Tested Turbidity (Safe &lt; 5)</span>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card">
+          <div class="dashboard-stat-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="dashboard-stat-info">
+            <strong>&#8377;0 Due</strong>
+            <span>3 Invoices Cleared &amp; Stamped</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 1: BOOK CLEANING VISITS -->
+      <section class="dashboard-panel is-active" data-dash-panel="booking" aria-labelledby="bookingTabHeading">
+        <div class="dashboard-panel-header">
+          <div>
+            <h2 id="bookingTabHeading" style="font-size: 1.4rem; margin-bottom: 4px;">Book a Tank &amp; Sump Cleaning Visit</h2>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">Schedule a certified technician crew for your next overhead tank or underground sump sanitization.</p>
+          </div>
+          <span class="status-badge status-badge--info">Instant Dispatch Slot Booking</span>
+        </div>
+
+        <div id="dashBookingAlert" class="alert alert--success" style="display:none; margin-bottom: var(--space-5);"></div>
+
+        <form id="dashBookingForm" novalidate>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-4);">
+            <div class="form-group">
+              <label for="dashTankSelect" class="form-label">Storage Tank / Sump Unit <span class="required" aria-hidden="true">*</span></label>
+              <select id="dashTankSelect" name="dashTankSelect" class="form-control" required>
+                <option value="Overhead Tank — Block A (10,000L)">Overhead Tank — Block A (10,000L RCC)</option>
+                <option value="Overhead Tank — Block B (10,000L)">Overhead Tank — Block B (10,000L RCC)</option>
+                <option value="Underground Main Sump (20,000L)">Underground Main Sump (20,000L RCC)</option>
+                <option value="Combined Block A+B Tanks &amp; Sump" selected>Combined Block A+B Tanks &amp; Sump (40,000L Total)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="dashServicePackage" class="form-label">Cleaning Service Scope <span class="required" aria-hidden="true">*</span></label>
+              <select id="dashServicePackage" name="dashServicePackage" class="form-control" required>
+                <option value="Standard 6-Stage Mechanised Cleaning">Standard 6-Stage Mechanised Cleaning</option>
+                <option value="Deep Desilting + Antibacterial UV Mist" selected>Deep Desilting + Antibacterial UV Mist (Recommended)</option>
+                <option value="Annual Maintenance Contract (AMC) Cycle Visit">Annual Maintenance Contract (AMC) Cycle Visit</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="dashDateSelect" class="form-label">Preferred Date <span class="required" aria-hidden="true">*</span></label>
+              <input type="date" id="dashDateSelect" name="dashDateSelect" class="form-control" value="2026-11-20" required>
+            </div>
+
+            <div class="form-group">
+              <label for="dashSlotSelect" class="form-label">Time Window <span class="required" aria-hidden="true">*</span></label>
+              <select id="dashSlotSelect" name="dashSlotSelect" class="form-control" required>
+                <option value="Morning Slot (08:30 AM – 12:30 PM)" selected>Morning Slot (08:30 AM – 12:30 PM)</option>
+                <option value="Afternoon Slot (01:00 PM – 05:00 PM)">Afternoon Slot (01:00 PM – 05:00 PM)</option>
+                <option value="Weekend Priority Slot (09:00 AM – 01:00 PM)">Weekend Priority Slot (09:00 AM – 01:00 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top: var(--space-4);">
+            <label for="dashNotes" class="form-label">Site Access Notes / Technician Instructions</label>
+            <textarea id="dashNotes" name="dashNotes" class="form-control" rows="3" placeholder="E.g., Rooftop access via Block A staircase; security guard has pump room keys; water drained to 15% level prior to arrival."></textarea>
+          </div>
+
+          <div style="margin-top: var(--space-5); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:text-bottom;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              Technicians carry full safety gear, PPE, low-voltage slurry pumps, and sanitized hoses.
+            </p>
+            <button type="submit" class="btn btn--primary">Confirm &amp; Schedule Visit</button>
+          </div>
+        </form>
+
+        <!-- SCHEDULED VISITS LIST -->
+        <div style="margin-top: var(--space-8);">
+          <h3 style="font-size: 1.15rem; margin-bottom: var(--space-4);">Upcoming &amp; Recent Visits</h3>
+          <div class="dashboard-table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Service Scope</th>
+                  <th>Storage Unit</th>
+                  <th>Visit Date &amp; Time</th>
+                  <th>Assigned Lead</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#AQ-BK-2026-92</strong></td>
+                  <td>Combined Tank &amp; Sump Deep Sanitization</td>
+                  <td>Block A + B Tanks &amp; Sump</td>
+                  <td>20 Nov 2026 &bull; 08:30 AM</td>
+                  <td>Rajesh K. (Crew #4)</td>
+                  <td><span class="status-badge status-badge--pending">Scheduled</span></td>
+                </tr>
+                <tr>
+                  <td><strong>#AQ-BK-2026-44</strong></td>
+                  <td>Underground Sump Sludge Desilting</td>
+                  <td>Main Sump 20,000L</td>
+                  <td>12 May 2026 &bull; 09:00 AM</td>
+                  <td>Vikram S. (Crew #2)</td>
+                  <td><span class="status-badge status-badge--success">Completed</span></td>
+                </tr>
+                <tr>
+                  <td><strong>#AQ-BK-2025-88</strong></td>
+                  <td>Bi-Annual Overhead Tank Descaling</td>
+                  <td>Block A &amp; B Overhead RCC</td>
+                  <td>15 Nov 2025 &bull; 08:30 AM</td>
+                  <td>Rajesh K. (Crew #4)</td>
+                  <td><span class="status-badge status-badge--success">Completed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: VIEW SERVICE REPORTS -->
+      <section class="dashboard-panel" data-dash-panel="reports" aria-labelledby="reportsTabHeading">
+        <div class="dashboard-panel-header">
+          <div>
+            <h2 id="reportsTabHeading" style="font-size: 1.4rem; margin-bottom: 4px;">Water Tank Inspection &amp; Hygiene Reports</h2>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">Verified service checklists, turbidity test results, before-and-after photo records, and compliance certificates.</p>
+          </div>
+          <span class="status-badge status-badge--success">Audited Hygiene Records</span>
+        </div>
+
+        <div class="report-card-grid">
+          <!-- Report Card 1 -->
+          <article class="report-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+              <div>
+                <span class="status-badge status-badge--success" style="margin-bottom: 6px;">Certified Clean</span>
+                <h3 style="font-size: 1.15rem; margin-bottom: 3px;">Block A &amp; B Overhead Tanks</h3>
+                <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0;">Service Ref: <strong>RPT-2026-05-12A</strong> &bull; Completed 12 May 2026</p>
+              </div>
+              <button type="button" class="btn btn--outline btn--sm" data-view-report="Block A &amp; B Overhead RCC Tanks (May 2026)">
+                View Checklist
+              </button>
+            </div>
+
+            <div class="report-metric-row">
+              <div>
+                <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight:700;">Sludge / Sediment</span>
+                <p style="margin: 3px 0 0; font-size: 0.95rem; font-weight: 700; color: var(--text-heading);">4.5 cm &rarr; <span style="color:var(--color-teal-600);">0.0 cm (Cleared)</span></p>
+              </div>
+              <div>
+                <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight:700;">Post-Clean Turbidity</span>
+                <p style="margin: 3px 0 0; font-size: 0.95rem; font-weight: 700; color: var(--text-heading);">1.1 NTU <span style="font-size:0.75rem; color:var(--color-teal-600);">(Potable standard)</span></p>
+              </div>
+            </div>
+
+            <div class="report-metric-row">
+              <div>
+                <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight:700;">Sanitizer Applied</span>
+                <p style="margin: 3px 0 0; font-size: 0.88rem; color: var(--text-heading);">Food-grade antibacterial mist (food-safe)</p>
+              </div>
+              <div>
+                <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight:700;">Lead Auditor</span>
+                <p style="margin: 3px 0 0; font-size: 0.88rem; color: var(--text-heading);">Rajesh K. (#AQ-408)</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.5rem; margin-top: auto; padding-top: 0.5rem;">
+              <button type="button" class="btn btn--secondary btn--sm" style="flex: 1;" data-download-invoice="RPT-2026-05-12A">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:text-bottom; margin-right:4px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download PDF Report
+              </button>
+            </div>
+          </article>
+
+          <!-- Report Card 2 -->
+          <article class="report-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+              <div>
+                <span class="status-badge status-badge--success" style="margin-bottom: 6px;">Certified Clean</span>
+                <h3 style="font-size: 1.15rem; margin-bottom: 3px;">Main Underground Sump (20kL)</h3>
+                <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0;">Service Ref: <strong>RPT-2025-11-15S</strong> &bull; Completed 15 Nov 2025</p>
+              </div>
+              <button type="button" class="btn btn--outline btn--sm" data-view-report="Underground Main Sump 20kL (Nov 2025)">
+                View Checklist
+              </button>
+            </div>
+
+            <div class="report-metric-row">
+              <div>
+                <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight:700;">Silt &amp; Sludge Depth</span>
+                <p style="margin: 3px 0 0; font-size: 0.95rem; font-weight: 700; color: var(--text-heading);">6.8 cm &rarr; <span style="color:var(--color-teal-600);">0.0 cm (Extracted)</span></p>
+              </div>
+              <div>
+                <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight:700;">Post-Clean Turbidity</span>
+                <p style="margin: 3px 0 0; font-size: 0.95rem; font-weight: 700; color: var(--text-heading);">1.4 NTU <span style="font-size:0.75rem; color:var(--color-teal-600);">(Compliant)</span></p>
+              </div>
+            </div>
+
+            <div class="report-metric-row">
+              <div>
+                <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight:700;">Extraction Method</span>
+                <p style="margin: 3px 0 0; font-size: 0.88rem; color: var(--text-heading);">Submersible dewatering &amp; sludge slurry pump</p>
+              </div>
+              <div>
+                <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight:700;">Lead Auditor</span>
+                <p style="margin: 3px 0 0; font-size: 0.88rem; color: var(--text-heading);">Vikram S. (#AQ-214)</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.5rem; margin-top: auto; padding-top: 0.5rem;">
+              <button type="button" class="btn btn--secondary btn--sm" style="flex: 1;" data-download-invoice="RPT-2025-11-15S">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:text-bottom; margin-right:4px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download PDF Report
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- TAB 3: SET RECURRING REMINDERS -->
+      <section class="dashboard-panel" data-dash-panel="reminders" aria-labelledby="remindersTabHeading">
+        <div class="dashboard-panel-header">
+          <div>
+            <h2 id="remindersTabHeading" style="font-size: 1.4rem; margin-bottom: 4px;">Recurring Water Hygiene Reminders</h2>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">Configure automated alerts so your overhead tanks and sumps are consistently serviced within healthy bi-annual cycles.</p>
+          </div>
+          <span class="status-badge status-badge--info">Bi-Annual Cycle Active</span>
+        </div>
+
+        <div id="dashReminderAlert" class="alert alert--success" style="display:none; margin-bottom: var(--space-5);"></div>
+
+        <form id="dashReminderForm" novalidate>
+          <div class="reminder-toggle-card">
+            <div>
+              <strong style="font-size: 1.05rem; display:block; margin-bottom: 4px; color: var(--text-heading);">6-Month Routine Overhead Tank Cleaning Alert</strong>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Notifies RWA office and maintenance staff when 180 days have passed since the previous descaling.</p>
+            </div>
+            <label style="display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 700; color: var(--color-teal-600);">
+              <input type="checkbox" name="remindOverhead" checked style="width: 18px; height: 18px; accent-color: var(--color-aqua-500);">
+              Enabled
+            </label>
+          </div>
+
+          <div class="reminder-toggle-card">
+            <div>
+              <strong style="font-size: 1.05rem; display:block; margin-bottom: 4px; color: var(--text-heading);">Pre-Monsoon Underground Sump Desilting Reminder</strong>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Triggers an inspection alert every May before rainy season runoff introduces silt and turbidity.</p>
+            </div>
+            <label style="display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 700; color: var(--color-teal-600);">
+              <input type="checkbox" name="remindSump" checked style="width: 18px; height: 18px; accent-color: var(--color-aqua-500);">
+              Enabled
+            </label>
+          </div>
+
+          <div class="reminder-toggle-card">
+            <div>
+              <strong style="font-size: 1.05rem; display:block; margin-bottom: 4px; color: var(--text-heading);">Post-Cleaning Water Quality Testing Reminder</strong>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Prompts scheduled turbidity and total dissolved solids (TDS) check 30 days after sanitization.</p>
+            </div>
+            <label style="display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 700; color: var(--color-teal-600);">
+              <input type="checkbox" name="remindQuality" checked style="width: 18px; height: 18px; accent-color: var(--color-aqua-500);">
+              Enabled
+            </label>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-4); margin-top: var(--space-5);">
+            <div class="form-group">
+              <label for="reminderChannels" class="form-label">Alert Channels</label>
+              <select id="reminderChannels" name="reminderChannels" class="form-control">
+                <option value="WhatsApp + Email (Recommended)" selected>WhatsApp + Email (Recommended)</option>
+                <option value="WhatsApp + SMS + Email">WhatsApp + SMS + Email</option>
+                <option value="Email Only">Email Only</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="reminderLeadTime" class="form-label">Advance Notice Timing</label>
+              <select id="reminderLeadTime" name="reminderLeadTime" class="form-control">
+                <option value="14 Days Before Due Date">14 Days Before Due Date</option>
+                <option value="7 Days Before Due Date" selected>7 Days Before Due Date</option>
+                <option value="3 Days Before Due Date">3 Days Before Due Date</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--space-6); text-align: right;">
+            <button type="submit" class="btn btn--primary">Save Reminder Preferences</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- TAB 4: MANAGE INVOICES -->
+      <section class="dashboard-panel" data-dash-panel="invoices" aria-labelledby="invoicesTabHeading">
+        <div class="dashboard-panel-header">
+          <div>
+            <h2 id="invoicesTabHeading" style="font-size: 1.4rem; margin-bottom: 4px;">Service Invoices &amp; Receipts</h2>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">Download GST-compliant tax invoices, payment vouchers, and digital job sign-offs.</p>
+          </div>
+          <span class="status-badge status-badge--success">&#10003; All Invoices Cleared</span>
+        </div>
+
+        <div class="dashboard-table-wrap">
+          <table class="dashboard-table">
+            <thead>
+              <tr>
+                <th>Invoice #</th>
+                <th>Service Scope</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Payment Mode</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>INV-2026-089</strong></td>
+                <td>Combined Tank &amp; Sump Deep Cleaning (40,000L)</td>
+                <td>12 May 2026</td>
+                <td><strong>&#8377;4,899</strong></td>
+                <td>UPI (Auto-Pay)</td>
+                <td><span class="status-badge status-badge--success">Paid</span></td>
+                <td>
+                  <button type="button" class="btn btn--secondary btn--sm" data-download-invoice="INV-2026-089">
+                    Download PDF
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>INV-2025-412</strong></td>
+                <td>High-Pressure Sump Sludge Extraction &amp; Desilting</td>
+                <td>15 Nov 2025</td>
+                <td><strong>&#8377;2,299</strong></td>
+                <td>Net Banking (HDFC)</td>
+                <td><span class="status-badge status-badge--success">Paid</span></td>
+                <td>
+                  <button type="button" class="btn btn--secondary btn--sm" data-download-invoice="INV-2025-412">
+                    Download PDF
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>INV-2025-188</strong></td>
+                <td>Bi-Annual Overhead Tank Sanitization &amp; Mist Disinfection</td>
+                <td>10 May 2025</td>
+                <td><strong>&#8377;1,799</strong></td>
+                <td>Credit Card</td>
+                <td><span class="status-badge status-badge--success">Paid</span></td>
+                <td>
+                  <button type="button" class="btn btn--secondary btn--sm" data-download-invoice="INV-2025-188">
+                    Download PDF
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- DASHBOARD IN-CONTENT FOOTNOTE -->
+      <div style="margin-top: auto; padding-top: var(--space-8); border-top: 1px solid var(--border-subtle); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+        <p style="margin: 0;">&copy; 2026 AQUAGUARD Water Tank &amp; Sump Hygiene Services &bull; Customer Account Portal</p>
+        <p style="margin: 0;">Need immediate assistance? Call <a href="tel:+919876543210" style="color:var(--color-aqua-600); font-weight:700;">+91 98765 43210</a></p>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

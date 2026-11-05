@@ -1,2 +1,0 @@
-# Overhead_Tank_Sump_Cleaning_Service
-Automated website repository for Overhead_Tank_Sump_Cleaning_Service

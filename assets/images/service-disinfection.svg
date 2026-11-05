@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" fill="none">
+  <rect width="640" height="420" rx="16" fill="#09223E"/>
+  <!-- Interior Tank Wall Being Sanitized with Fine-Mist Spray Wand -->
+  <rect x="55" y="55" width="310" height="310" rx="14" fill="#E0F2FE" stroke="#38BDF8" stroke-width="2.5"/>
+  <g stroke="#BAE6FD" stroke-width="1.5">
+    <line x1="55" y1="132" x2="365" y2="132"/><line x1="55" y1="210" x2="365" y2="210"/>
+    <line x1="55" y1="288" x2="365" y2="288"/><line x1="158" y1="55" x2="158" y2="365"/>
+    <line x1="262" y1="55" x2="262" y2="365"/>
+  </g>
+  <!-- Fine-Mist Disinfection Spray Cone -->
+  <polygon points="445,215 175,95 175,335" fill="#00A8E8" fill-opacity="0.32"/>
+  <circle cx="225" cy="165" r="18" fill="#10B981" fill-opacity="0.25"/>
+  <path d="M218,165 L223,170 L233,160" stroke="#0D9488" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="245" cy="255" r="18" fill="#10B981" fill-opacity="0.25"/>
+  <path d="M238,255 L243,260 L253,250" stroke="#0D9488" stroke-width="3" stroke-linecap="round"/>
+  <!-- Specialist Holding Stainless Atomizer Wand -->
+  <rect x="468" y="155" width="64" height="110" rx="16" fill="#133B6E" stroke="#00A8E8" stroke-width="2"/>
+  <circle cx="500" cy="122" r="22" fill="#FDBA74"/>
+  <rect x="483" y="114" width="30" height="12" rx="6" fill="#00A8E8" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M475,112 C475,92 525,92 525,112 Z" fill="#FFFFFF" stroke="#00A8E8" stroke-width="2"/>
+  <line x1="472" y1="205" x2="420" y2="215" stroke="#E2E8F0" stroke-width="6" stroke-linecap="round"/>
+  <!-- Stainless Disinfection Cylinder -->
+  <rect x="545" y="215" width="46" height="115" rx="12" fill="#CBD5E1" stroke="#64748B" stroke-width="2.5"/>
+  <rect x="553" y="245" width="30" height="42" rx="4" fill="#0D9488"/>
+</svg>
+

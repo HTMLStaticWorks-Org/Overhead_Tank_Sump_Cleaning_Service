@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" fill="none">
+  <rect width="640" height="420" rx="16" fill="#0F294A"/>
+  <!-- Modern Residential House Silhouette & Rooftop Tank -->
+  <rect x="110" y="175" width="320" height="190" rx="8" fill="#1E3A5F" stroke="#38BDF8" stroke-width="2"/>
+  <rect x="95" y="160" width="350" height="18" rx="4" fill="#334155"/>
+  <!-- Residential Rooftop Polymer Tank -->
+  <rect x="215" y="68" width="110" height="92" rx="12" fill="#F8FAFC" stroke="#00A8E8" stroke-width="2.5"/>
+  <rect x="242" y="54" width="56" height="15" rx="4" fill="#00A8E8"/>
+  <line x1="215" y1="98" x2="325" y2="98" stroke="#CBD5E1" stroke-width="4"/>
+  <line x1="215" y1="128" x2="325" y2="128" stroke="#CBD5E1" stroke-width="4"/>
+  <!-- Windows & Home Details -->
+  <rect x="150" y="215" width="75" height="65" rx="6" fill="#E0F2FE" fill-opacity="0.85"/>
+  <rect x="265" y="215" width="125" height="65" rx="6" fill="#E0F2FE" fill-opacity="0.85"/>
+  <!-- Clean Water Piping to Home Fixtures -->
+  <path d="M270,160 L270,325 L485,325" stroke="#00A8E8" stroke-width="5" stroke-dasharray="8 4" fill="none"/>
+  <!-- Technician Servicing Home Tank -->
+  <rect x="465" y="205" width="130" height="145" rx="12" fill="#0B2545" stroke="#0D9488" stroke-width="2"/>
+  <circle cx="530" cy="252" r="24" fill="#0D9488" fill-opacity="0.25"/>
+  <path d="M520,252 L528,260 L543,244" stroke="#10B981" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="485" y="302" font-family="Manrope, sans-serif" font-weight="700" font-size="13" fill="#FFFFFF">Home Hygiene</text>
+  <text x="485" y="322" font-family="Inter, sans-serif" font-weight="500" font-size="11.5" fill="#94A3B8">500L – 3,000L Tanks</text>
+</svg>
+

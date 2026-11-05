@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" fill="none">
+  <rect width="640" height="420" rx="16" fill="#0B2545"/>
+  <!-- Multi-Compartment Apartment & Commercial RCC Water Storage Array -->
+  <rect x="45" y="135" width="250" height="210" rx="10" fill="#E2E8F0" stroke="#64748B" stroke-width="3"/>
+  <rect x="335" y="135" width="250" height="210" rx="10" fill="#E2E8F0" stroke="#64748B" stroke-width="3"/>
+  <!-- Dual Compartment Cutaways -->
+  <rect x="68" y="162" width="204" height="158" rx="6" fill="#E0F2FE" stroke="#00A8E8" stroke-width="2"/>
+  <rect x="358" y="162" width="204" height="158" rx="6" fill="#E0F2FE" stroke="#0D9488" stroke-width="2"/>
+  <path d="M68,248 Q120,238 170,248 T272,248 L272,320 L68,320 Z" fill="#00A8E8" fill-opacity="0.82"/>
+  <path d="M358,248 Q410,238 460,248 T562,248 L562,320 L358,320 Z" fill="#0D9488" fill-opacity="0.82"/>
+  <!-- Interconnecting Header Manifold & Bypass Valve -->
+  <path d="M170,345 L170,378 L460,378 L460,345" stroke="#38BDF8" stroke-width="8" fill="none"/>
+  <circle cx="315" cy="378" r="14" fill="#10B981" stroke="#FFFFFF" stroke-width="2.5"/>
+  <!-- Header Badge -->
+  <rect x="135" y="42" width="370" height="58" rx="12" fill="#133B6E" stroke="#00A8E8" stroke-width="1.5"/>
+  <text x="165" y="68" font-family="Manrope, sans-serif" font-weight="700" font-size="14" fill="#FFFFFF">Multi-Compartment Society &amp; Commercial Care</text>
+  <text x="165" y="87" font-family="Inter, sans-serif" font-weight="500" font-size="12" fill="#BAE6FD">Phased compartment cleaning minimizes water downtime</text>
+</svg>
+

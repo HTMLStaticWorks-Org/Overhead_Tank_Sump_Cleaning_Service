@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="agShield" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B2545"/>
+      <stop offset="100%" stop-color="#133B6E"/>
+    </linearGradient>
+    <linearGradient id="agDrop" x1="20" y1="16" x2="44" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00A8E8"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 4L10 13V30C10 44.8 19.4 57.6 32 61C44.6 57.6 54 44.8 54 30V13L32 4Z" fill="url(#agShield)" stroke="#00A8E8" stroke-width="2.5"/>
+  <path d="M32 16C32 16 20 29.2 20 37.5C20 44.1 25.4 49.5 32 49.5C38.6 49.5 44 44.1 44 37.5C44 29.2 32 16 32 16Z" fill="url(#agDrop)"/>
+  <path d="M24 38.5L29.5 44L40.5 33" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+

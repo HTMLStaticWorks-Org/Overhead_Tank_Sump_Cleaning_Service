@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us &amp; Contact / Book a Cleaning — AQUAGUARD</title>
+  <meta name="description" content="Learn about AQUAGUARD's commitment to overhead water tank and underground sump hygiene, view editable contact details, and submit a service enquiry.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    if (window.location.hash === '#contact' || window.location.hash === '#enquiry-form' || window.location.search) {
+      window.location.replace('contact.html' + window.location.search + window.location.hash);
+    } else {
+      window.location.replace('about.html' + window.location.hash);
+    }
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=about.html">
+  </noscript>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- MANDATORY STICKY NAVBAR -->
+  <header class="site-header" id="top">
+    <div class="container navbar">
+      <a href="index.html" class="navbar__brand" aria-label="AQUAGUARD Home">
+        <img src="assets/icons/favicon.svg" alt="" class="navbar__brand-mark" width="40" height="40">
+        <div class="navbar__brand-text">
+          <span class="navbar__brand-title">AQUA<span>GUARD</span></span>
+          <span class="navbar__brand-sub">Tank &amp; Sump Hygiene</span>
+        </div>
+      </a>
+
+      <nav class="navbar__nav" aria-label="Primary Navigation">
+        <!-- Home Dropdown -->
+        <div class="nav-item nav-item--dropdown">
+          <button type="button" class="nav-link" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="nav-link__caret" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-item__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </span>
+              <span class="dropdown-item__content">
+                <span class="dropdown-item__title">Home</span>
+                <span class="dropdown-item__desc">Clean water safety &amp; service discovery</span>
+              </span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span class="dropdown-item__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              <span class="dropdown-item__content">
+                <span class="dropdown-item__title">Home-2</span>
+                <span class="dropdown-item__desc">Cleaning process &amp; hygiene standards</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Services Dropdown -->
+        <div class="nav-item nav-item--dropdown">
+          <button type="button" class="nav-link" data-dropdown-trigger aria-expanded="false" aria-haspopup="true">
+            <span>Services</span>
+            <svg class="nav-link__caret" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu dropdown-menu--services" role="menu">
+            <a href="services.html#overhead-tank" class="dropdown-item" role="menuitem">
+              <span class="dropdown-item__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/></svg>
+              </span>
+              <span class="dropdown-item__content">
+                <span class="dropdown-item__title">Overhead Water Tank Cleaning</span>
+                <span class="dropdown-item__desc">Rooftop syntax, polymer &amp; RCC tanks</span>
+              </span>
+            </a>
+            <a href="services.html#underground-sump" class="dropdown-item" role="menuitem">
+              <span class="dropdown-item__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M8 16h8"/></svg>
+              </span>
+              <span class="dropdown-item__content">
+                <span class="dropdown-item__title">Underground Sump Cleaning</span>
+                <span class="dropdown-item__desc">Submersible dewatering &amp; silt vacuuming</span>
+              </span>
+            </a>
+            <a href="services.html#combined-cleaning" class="dropdown-item" role="menuitem">
+              <span class="dropdown-item__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+              </span>
+              <span class="dropdown-item__content">
+                <span class="dropdown-item__title">Combined Tank &amp; Sump Cleaning</span>
+                <span class="dropdown-item__desc">Complete synchronized water storage hygiene</span>
+              </span>
+            </a>
+            <a href="services.html#residential-cleaning" class="dropdown-item" role="menuitem">
+              <span class="dropdown-item__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              </span>
+              <span class="dropdown-item__content">
+                <span class="dropdown-item__title">Residential Tank Cleaning</span>
+                <span class="dropdown-item__desc">Independent houses, villas &amp; domestic tanks</span>
+              </span>
+            </a>
+            <a href="services.html#commercial-cleaning" class="dropdown-item" role="menuitem">
+              <span class="dropdown-item__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="2" width="18" height="20" rx="2"/><line x1="9" y1="6" x2="15" y2="6"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+              </span>
+              <span class="dropdown-item__content">
+                <span class="dropdown-item__title">Apartment &amp; Commercial Cleaning</span>
+                <span class="dropdown-item__desc">Societies, offices, hospitals &amp; institutions</span>
+              </span>
+            </a>
+            <a href="services.html#tank-disinfection" class="dropdown-item" role="menuitem">
+              <span class="dropdown-item__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              </span>
+              <span class="dropdown-item__content">
+                <span class="dropdown-item__title">Water Tank Disinfection</span>
+                <span class="dropdown-item__desc">Food-grade antibacterial mist sanitization</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="pricing.html" class="nav-link">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#why-aquaguard" class="nav-link">Why AQUAGUARD</a>
+        </div>
+        <div class="nav-item">
+          <a href="#about" class="nav-link is-active">About Us</a>
+        </div>
+        <div class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      </nav>
+
+      <div class="navbar__actions">
+        <button type="button" class="icon-btn" data-search-open aria-label="Search services and questions" title="Search (Ctrl+K)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Switch theme" aria-pressed="false" title="Toggle Light/Dark Theme">
+          <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <div class="navbar__auth-links">
+          <a href="login.html" class="btn btn--ghost btn--sm">Login</a>
+          <a href="signup.html" class="btn btn--secondary btn--sm">Sign Up</a>
+        </div>
+
+        <a href="#enquiry-form" class="btn btn--primary btn--sm navbar__cta-desktop">Book a Cleaning</a>
+
+        <button type="button" class="navbar__hamburger" id="mobileMenuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU DRAWER (Nicely designed with all buttons moved inside for mobile & tab views) -->
+  <div class="mobile-menu-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    
+    <!-- Drawer Header with Brandname & Close Button -->
+    <div class="mobile-drawer__header">
+      <a href="index.html" class="navbar__brand" aria-label="AQUAGUARD Home">
+        <img src="assets/icons/favicon.svg" alt="" class="navbar__brand-mark" width="40" height="40">
+        <div class="navbar__brand-text">
+          <span class="navbar__brand-title">AQUA<span>GUARD</span></span>
+          <span class="navbar__brand-sub">Tank &amp; Sump Hygiene</span>
+        </div>
+      </a>
+      <button type="button" class="mobile-drawer__close" id="mobileDrawerClose" aria-label="Close menu">&times;</button>
+    </div>
+
+    <!-- Search Button inside Menu -->
+    <button type="button" class="mobile-search-btn" data-search-open aria-label="Search services and answers">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="color:var(--color-aqua-500);"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search services, FAQs...</span>
+      </div>
+      <kbd>Search</kbd>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <button type="button" class="mobile-dropdown-trigger" data-mobile-dropdown aria-expanded="false">
+          <span>Home</span>
+          <svg class="nav-link__caret" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-submenu-link">Home — Clean Water Safety</a>
+          <a href="home-2.html" class="mobile-submenu-link">Home-2 — Cleaning Process</a>
+        </div>
+      </li>
+      <li class="mobile-nav-item">
+        <button type="button" class="mobile-dropdown-trigger" data-mobile-dropdown aria-expanded="false">
+          <span>Services</span>
+          <svg class="nav-link__caret" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="services.html#overhead-tank" class="mobile-submenu-link">Overhead Water Tank Cleaning</a>
+          <a href="services.html#underground-sump" class="mobile-submenu-link">Underground Sump Cleaning</a>
+          <a href="services.html#combined-cleaning" class="mobile-submenu-link">Combined Tank &amp; Sump Cleaning</a>
+          <a href="services.html#residential-cleaning" class="mobile-submenu-link">Residential Tank Cleaning</a>
+          <a href="services.html#commercial-cleaning" class="mobile-submenu-link">Apartment &amp; Commercial Cleaning</a>
+          <a href="services.html#tank-disinfection" class="mobile-submenu-link">Water Tank Disinfection</a>
+        </div>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link is-active">About Us</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+      </li>
+    </ul>
+
+    <!-- Controls & Preferences moved inside Menu Drawer -->
+    <div style="margin-top: var(--space-2);">
+      <span class="mobile-drawer__section-title">Preferences</span>
+      <div class="mobile-drawer__controls-grid">
+        <div class="mobile-control-card">
+          <span class="mobile-control-card__label">Layout Direction</span>
+          <button type="button" class="mobile-control-btn rtl-toggle-btn" data-rtl-toggle aria-label="Toggle RTL layout" aria-pressed="false" title="Toggle RTL / LTR">
+            RTL
+          </button>
+        </div>
+
+        <div class="mobile-control-card">
+          <span class="mobile-control-card__label">Display Mode</span>
+          <button type="button" class="mobile-control-btn" data-theme-toggle aria-label="Switch theme" aria-pressed="false" title="Toggle Light/Dark Theme">
+            <svg class="theme-toggle__sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="theme-toggle__moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <span>Theme</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Primary CTA & Account Links inside Menu Drawer -->
+    <div class="mobile-drawer__actions">
+      <a href="signup.html" class="btn btn--primary mobile-drawer__cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+        <span>Sign Up for Service</span>
+      </a>
+      <div class="mobile-drawer__footer-links">
+        <a href="login.html">Sign In to Customer Account &rarr;</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- INTERACTIVE SEARCH MODAL -->
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Search AQUAGUARD website" aria-hidden="true">
+    <div class="search-modal__dialog">
+      <div class="search-modal__header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="color:var(--color-aqua-500); flex-shrink:0;">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="search" id="searchModalInput" class="search-modal__input" placeholder="Search services, sump cleaning, pricing, FAQs..." aria-label="Search AQUAGUARD website">
+        <button type="button" id="searchModalClose" class="search-modal__close" aria-label="Close search">ESC</button>
+      </div>
+      <div class="search-modal__results" id="searchModalResults"></div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- 1. ABOUT AQUAGUARD SECTION -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="hero-home1__grid">
+          <div>
+            <span class="eyebrow">About AQUAGUARD</span>
+            <h1>Dedicated to Clean Water Storage &amp; Hygienic Living</h1>
+            <p style="margin-top: 1rem; font-size: 1.05rem;">
+              <strong>AQUAGUARD</strong> is a specialised water-storage hygiene service focused on overhead water tanks and underground sumps. Rather than treating tank cleaning as a casual side-task of general plumbing, our operations are built specifically around clean dewatering, sediment extraction, interior surface care, and sanitization.
+            </p>
+            <p style="margin-top: 1rem;">
+              We serve independent homeowners, apartment Resident Welfare Associations (RWAs), commercial offices, clinics, educational campuses, and hospitality properties. Every business detail on this page is structured for straightforward customization by your service team.
+            </p>
+
+            <div class="service-detail-card__meta-grid" style="margin-top: 1.75rem;">
+              <div class="service-meta-box">
+                <h4>Our Cleaning Approach</h4>
+                <ul>
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Valve isolation to protect building pipelines</span>
+                  </li>
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Wet-vacuum extraction of bottom silt &amp; mud</span>
+                  </li>
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Material-appropriate wall scrubbing &amp; jet wash</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-meta-box">
+                <h4>Equipment &amp; Crew Hygiene</h4>
+                <ul>
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Dedicated sanitized gumboots, gloves &amp; PPE</span>
+                  </li>
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Submersible dewatering &amp; vacuum sludge units</span>
+                  </li>
+                  <li>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Fine-mist disinfection sprayers &amp; work lighting</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual-frame">
+            <img src="assets/images/hero-home2.svg" alt="AQUAGUARD technicians with submersible dewatering and vacuum extraction equipment" width="920" height="640">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CONTACT INFORMATION & ENQUIRY FORM SECTION -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Contact &amp; Service Booking</span>
+          <h2>Get in Touch or Request a Cleaning Slot</h2>
+          <p>
+            Reach out via phone or email, or complete the service enquiry form below with your tank details.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+
+          <!-- Left Column: Editable Contact Information & Map -->
+          <div class="contact-info-card">
+            <div>
+              <span class="eyebrow" style="margin-bottom: 0.5rem;">Editable Business Info</span>
+              <h3>Contact Information</h3>
+              <p style="font-size: 0.875rem; margin-top: 4px;">
+                All contact fields below are clearly marked editable placeholders for your local service operations.
+              </p>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-item__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h4>Phone Number (Editable)</h4>
+                <p><a href="tel:+919876543210">+91 98765 43210</a> / <a href="tel:+918023456789">+91 80 2345 6789</a></p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-item__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <h4>Email Address (Editable)</h4>
+                <p><a href="mailto:care@aquaguardhygiene.example">care@aquaguardhygiene.example</a></p>
+                <p><a href="mailto:quotes@aquaguardhygiene.example">quotes@aquaguardhygiene.example</a></p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-item__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4>Office &amp; Dispatch Address (Editable)</h4>
+                <p>Unit 204, Clean Water Service Hub, 2nd Main Road, Industrial &amp; Civic Layout, Your City – 560001</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-item__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h4>Business &amp; Service Hours (Editable)</h4>
+                <p>Monday – Saturday: 8:00 AM – 7:00 PM</p>
+                <p>Sunday: Scheduled Apartment &amp; Commercial Bookings</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-item__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+              </div>
+              <div>
+                <h4>Service Locations (Editable)</h4>
+                <p>North, South, East &amp; West Metro Residential Zones, IT Corridors, and Suburban Apartment Belts</p>
+              </div>
+            </div>
+
+            <!-- Social Media Links (Editable) -->
+            <div style="padding-top: 0.75rem; border-top: 1px solid var(--border-subtle);">
+              <h4 style="font-size: 0.875rem; margin-bottom: 0.75rem;">Social Channels (Editable Links)</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <a href="#contact" class="btn btn--secondary btn--sm">Instagram</a>
+                <a href="#contact" class="btn btn--secondary btn--sm">Facebook</a>
+                <a href="#contact" class="btn btn--secondary btn--sm">LinkedIn</a>
+                <a href="#contact" class="btn btn--secondary btn--sm">WhatsApp Enquiry</a>
+              </div>
+            </div>
+
+            <!-- Interactive Map / Location Visual Section -->
+            <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-default); background-color: var(--bg-secondary); padding: 1.25rem;">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.75rem;">
+                <strong style="font-size:0.9rem; color:var(--text-heading);">Service Coverage Map Preview</strong>
+                <span style="font-size:0.75rem; color:var(--color-aqua-600); font-weight:700;">Mobile Dispatch Units</span>
+              </div>
+              <svg viewBox="0 0 480 210" width="100%" height="165" style="border-radius:8px; background:#0B2545;">
+                <g stroke="#1E3A5F" stroke-width="1">
+                  <line x1="0" y1="42" x2="480" y2="42"/><line x1="0" y1="84" x2="480" y2="84"/>
+                  <line x1="0" y1="126" x2="480" y2="126"/><line x1="0" y1="168" x2="480" y2="168"/>
+                  <line x1="96" y1="0" x2="96" y2="210"/><line x1="192" y1="0" x2="192" y2="210"/>
+                  <line x1="288" y1="0" x2="288" y2="210"/><line x1="384" y1="0" x2="384" y2="210"/>
+                </g>
+                <path d="M30,165 Q150,90 250,110 T450,55" stroke="#00A8E8" stroke-width="3" fill="none" stroke-dasharray="6 4"/>
+                <circle cx="240" cy="105" r="55" fill="#00A8E8" fill-opacity="0.14" stroke="#00A8E8" stroke-width="1.5"/>
+                <circle cx="240" cy="105" r="8" fill="#10B981" stroke="#FFFFFF" stroke-width="2.5"/>
+                <circle cx="135" cy="70" r="5" fill="#38BDF8"/>
+                <circle cx="345" cy="80" r="5" fill="#38BDF8"/>
+                <circle cx="170" cy="150" r="5" fill="#38BDF8"/>
+                <circle cx="330" cy="145" r="5" fill="#38BDF8"/>
+                <text x="155" y="192" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#BAE6FD">AQUAGUARD Central Dispatch &amp; Zone Coverage</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Right Column: 10-Field Enquiry Form -->
+          <div class="enquiry-form-card" id="enquiry-form">
+            <div style="margin-bottom: 1.5rem;">
+              <span class="eyebrow" style="margin-bottom: 0.5rem;">Service Enquiry &amp; Booking Request</span>
+              <h3>Request a Tank or Sump Cleaning</h3>
+              <p style="font-size: 0.9rem; margin-top: 4px;">
+                Complete the fields below. Fields marked with <span style="color:var(--color-danger);">*</span> are required.
+              </p>
+            </div>
+
+            <form id="enquiryForm" novalidate>
+              <div class="form-grid">
+                <!-- 1. Full Name -->
+                <div class="form-group">
+                  <label for="fullName" class="form-label">Full Name <span>*</span></label>
+                  <input type="text" id="fullName" name="fullName" class="form-control" placeholder="e.g. Rajesh Sharma" required autocomplete="name">
+                  <span class="form-error">Please enter your full name.</span>
+                </div>
+
+                <!-- 2. Phone Number -->
+                <div class="form-group">
+                  <label for="phoneNumber" class="form-label">Phone Number <span>*</span></label>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="e.g. +91 98765 43210" required autocomplete="tel">
+                  <span class="form-error">Please enter a valid phone number (8–15 digits).</span>
+                </div>
+
+                <!-- 3. Email Address -->
+                <div class="form-group">
+                  <label for="emailAddress" class="form-label">Email Address <span>*</span></label>
+                  <input type="email" id="emailAddress" name="emailAddress" class="form-control" placeholder="e.g. name@example.com" required autocomplete="email">
+                  <span class="form-error">Please enter a valid email address.</span>
+                </div>
+
+                <!-- 4. Property Type -->
+                <div class="form-group">
+                  <label for="propertyType" class="form-label">Property Type <span>*</span></label>
+                  <select id="propertyType" name="propertyType" class="form-control" required>
+                    <option value="">Select Property Type</option>
+                    <option value="Independent House">Independent House / Villa</option>
+                    <option value="Apartment Society">Residential Apartment / RWA Society</option>
+                    <option value="Commercial Building">Office / Commercial Building</option>
+                    <option value="Hospital / Clinic">Hospital / Healthcare Facility</option>
+                    <option value="Educational / Institutional">School / College / Institution</option>
+                  </select>
+                  <span class="form-error">Please select your property type.</span>
+                </div>
+
+                <!-- 5. Required Service -->
+                <div class="form-group">
+                  <label for="requiredService" class="form-label">Required Service <span>*</span></label>
+                  <select id="requiredService" name="requiredService" class="form-control" required>
+                    <option value="">Select Required Service</option>
+                    <option value="overhead-tank">Overhead Water Tank Cleaning</option>
+                    <option value="underground-sump">Underground Sump Cleaning</option>
+                    <option value="combined-cleaning">Combined Tank &amp; Sump Cleaning</option>
+                    <option value="residential-cleaning">Residential Tank Cleaning</option>
+                    <option value="commercial-cleaning">Apartment &amp; Commercial Cleaning</option>
+                    <option value="tank-disinfection">Water Tank Disinfection</option>
+                  </select>
+                  <span class="form-error">Please select the required service.</span>
+                </div>
+
+                <!-- 6. Tank Type -->
+                <div class="form-group">
+                  <label for="tankType" class="form-label">Tank Type <span>*</span></label>
+                  <select id="tankType" name="tankType" class="form-control" required>
+                    <option value="">Select Tank Material / Type</option>
+                    <option value="Overhead Tank">Overhead Tank (Polymer / Syntax / RCC)</option>
+                    <option value="Underground Sump">Underground Sump (Concrete / Masonry)</option>
+                    <option value="Both Overhead Tank and Sump">Both Overhead Tank &amp; Underground Sump</option>
+                    <option value="Multi-Compartment RCC Reservoir">Multi-Compartment RCC Reservoir</option>
+                    <option value="Domestic Loft Tank">Domestic Indoor Loft Tank</option>
+                  </select>
+                  <span class="form-error">Please select the tank type.</span>
+                </div>
+
+                <!-- 7. Approximate Tank Capacity -->
+                <div class="form-group">
+                  <label for="tankCapacity" class="form-label">Approximate Tank Capacity <span>*</span></label>
+                  <select id="tankCapacity" name="tankCapacity" class="form-control" required>
+                    <option value="">Select Approximate Capacity</option>
+                    <option value="500L - 1,000L">500L – 1,000L</option>
+                    <option value="1,001L - 2,000L">1,001L – 2,000L</option>
+                    <option value="2,001L - 5,000L">2,001L – 5,000L</option>
+                    <option value="5,001L - 10,000L">5,001L – 10,000L</option>
+                    <option value="10,001L - 20,000L">10,001L – 20,000L</option>
+                    <option value="Above 20,000L (Commercial / Apartment)">Above 20,000L (Apartment / Commercial)</option>
+                  </select>
+                  <span class="form-error">Please select the approximate tank capacity.</span>
+                </div>
+
+                <!-- 8. Location -->
+                <div class="form-group">
+                  <label for="serviceLocation" class="form-label">Location / Locality <span>*</span></label>
+                  <input type="text" id="serviceLocation" name="serviceLocation" class="form-control" placeholder="e.g. Indiranagar / Whitefield / Sector 4" required>
+                  <span class="form-error">Please enter your locality or area.</span>
+                </div>
+
+                <!-- 9. Preferred Service Date -->
+                <div class="form-group form-group--full">
+                  <label for="preferredDate" class="form-label">Preferred Service Date <span>*</span></label>
+                  <input type="date" id="preferredDate" name="preferredDate" class="form-control" required>
+                  <span class="form-error">Please choose a preferred service date.</span>
+                </div>
+
+                <!-- 10. Additional Message -->
+                <div class="form-group form-group--full">
+                  <label for="additionalMessage" class="form-label">Additional Message (Optional)</label>
+                  <textarea id="additionalMessage" name="additionalMessage" class="form-control" placeholder="Share number of tanks, terrace access details, preferred time slot (morning/afternoon), or any specific questions..."></textarea>
+                </div>
+
+                <div class="form-group form-group--full" style="margin-top: 0.5rem;">
+                  <button type="submit" class="btn btn--primary btn--lg btn--full">Submit Service Enquiry</button>
+                  <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 0.5rem;">
+                    Frontend Demonstration Form: Submitting validates your inputs locally and displays a request preview without claiming a live backend booking is confirmed.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Frontend Demo Submission Feedback State -->
+              <div id="enquiryDemoSuccess" class="form-demo-alert" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="navbar__brand" aria-label="AQUAGUARD Home" style="margin-bottom: 1rem;">
+            <img src="assets/icons/favicon.svg" alt="" class="navbar__brand-mark" width="40" height="40">
+            <div class="navbar__brand-text">
+              <span class="navbar__brand-title">AQUA<span>GUARD</span></span>
+              <span class="navbar__brand-sub">Tank &amp; Sump Hygiene</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem; color: #94A3B8; margin-bottom: 1.25rem;">
+            Specialised overhead water tank and underground sump cleaning service for residential homes, apartment societies, commercial buildings, and institutions.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Cleaning Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#overhead-tank">Overhead Water Tank Cleaning</a></li>
+            <li><a href="services.html#underground-sump">Underground Sump Cleaning</a></li>
+            <li><a href="services.html#combined-cleaning">Combined Tank &amp; Sump Cleaning</a></li>
+            <li><a href="services.html#residential-cleaning">Residential Tank Cleaning</a></li>
+            <li><a href="services.html#commercial-cleaning">Apartment &amp; Commercial Cleaning</a></li>
+            <li><a href="services.html#tank-disinfection">Water Tank Disinfection</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home (Water Safety)</a></li>
+            <li><a href="home-2.html">Home-2 (Cleaning Process)</a></li>
+            <li><a href="pricing.html">Service Packages &amp; Pricing</a></li>
+            <li><a href="index.html#why-aquaguard">Why Choose AQUAGUARD</a></li>
+            <li><a href="#about">About AQUAGUARD</a></li>
+            <li><a href="#enquiry-form">Book a Cleaning</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Editable Contact Details</h3>
+          <ul class="footer-links">
+            <li>Phone: <a href="tel:+919876543210">+91 98765 43210 (Editable)</a></li>
+            <li>Email: <a href="mailto:care@aquaguardhygiene.example">care@aquaguardhygiene.example</a></li>
+            <li>Hours: Mon – Sat, 8:00 AM – 7:00 PM</li>
+            <li>Service Zones: Metro &amp; Suburban Zones (Editable)</li>
+            <li style="padding-top: 0.5rem;">
+              <a href="login.html" style="margin-right: 1rem; color: #38BDF8;">Customer Login</a>
+              <a href="signup.html" style="color: #38BDF8;">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AQUAGUARD Water Tank &amp; Sump Hygiene Services. All rights reserved.</p>
+        <p>Clean Tanks. Safer Water. Healthier Living. | Commercial Service Website Template</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

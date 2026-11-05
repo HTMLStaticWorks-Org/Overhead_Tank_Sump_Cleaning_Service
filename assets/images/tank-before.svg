@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" fill="none">
+  <defs>
+    <!-- Realistic Concrete Wall & Sludge Gradients -->
+    <linearGradient id="leftWallBefore" x1="0" y1="0" x2="280" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4A524D"/>
+      <stop offset="55%" stop-color="#5A6258"/>
+      <stop offset="100%" stop-color="#3E463D"/>
+    </linearGradient>
+    <linearGradient id="rightWallBefore" x1="960" y1="0" x2="680" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#434B46"/>
+      <stop offset="55%" stop-color="#545C52"/>
+      <stop offset="100%" stop-color="#3A4239"/>
+    </linearGradient>
+    <linearGradient id="backWallBefore" x1="480" y1="90" x2="480" y2="410" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5E665F"/>
+      <stop offset="45%" stop-color="#4E584B"/>
+      <stop offset="80%" stop-color="#3D4837"/>
+      <stop offset="100%" stop-color="#33291E"/>
+    </linearGradient>
+    <linearGradient id="floorBefore" x1="480" y1="400" x2="480" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B2E1E"/>
+      <stop offset="45%" stop-color="#4A3723"/>
+      <stop offset="100%" stop-color="#2D2013"/>
+    </linearGradient>
+    <linearGradient id="ceilingBefore" x1="480" y1="0" x2="480" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#363D3A"/>
+      <stop offset="100%" stop-color="#4C5450"/>
+    </linearGradient>
+    <linearGradient id="biofilmBand" x1="0" y1="210" x2="0" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3E5634" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#3B5B2C" stop-opacity="0.65"/>
+      <stop offset="70%" stop-color="#2D4A22" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#3B2B1A" stop-opacity="0.95"/>
+    </linearGradient>
+    <radialGradient id="sludgePool" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#5C4022"/>
+      <stop offset="60%" stop-color="#432E18"/>
+      <stop offset="100%" stop-color="#2A1C0E"/>
+    </radialGradient>
+    <radialGradient id="inspectionBeamBefore" cx="50%" cy="15%" r="65%">
+      <stop offset="0%" stop-color="#FFFBEB" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#FDE68A" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.35"/>
+    </radialGradient>
+    <filter id="concreteGrain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.22  0 0 0 0 0.20  0 0 0 0 0.15  0 0 0 0.16 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+
+  <!-- 3D Perspective Chamber Geometry -->
+  <!-- Ceiling -->
+  <polygon points="0,0 960,0 700,105 260,105" fill="url(#ceilingBefore)"/>
+  <!-- Left Wall -->
+  <polygon points="0,0 260,105 260,415 0,600" fill="url(#leftWallBefore)"/>
+  <!-- Right Wall -->
+  <polygon points="960,0 700,105 700,415 960,600" fill="url(#rightWallBefore)"/>
+  <!-- Back Wall -->
+  <rect x="260" y="105" width="440" height="310" fill="url(#backWallBefore)"/>
+  <!-- Floor -->
+  <polygon points="260,415 700,415 960,600 0,600" fill="url(#floorBefore)"/>
+
+  <!-- Concrete Formwork Lines & Joints -->
+  <g stroke="#2B312D" stroke-width="1.5" opacity="0.55">
+    <line x1="260" y1="105" x2="700" y2="105"/>
+    <line x1="260" y1="210" x2="700" y2="210"/>
+    <line x1="260" y1="315" x2="700" y2="315"/>
+    <line x1="260" y1="415" x2="700" y2="415"/>
+    <line x1="0" y1="190" x2="260" y2="210"/>
+    <line x1="0" y1="390" x2="260" y2="315"/>
+    <line x1="960" y1="190" x2="700" y2="210"/>
+    <line x1="960" y1="390" x2="700" y2="315"/>
+    <line x1="370" y1="105" x2="370" y2="415"/>
+    <line x1="480" y1="105" x2="480" y2="415"/>
+    <line x1="590" y1="105" x2="590" y2="415"/>
+  </g>
+
+  <!-- High-Water Line Mineral Scale & Calcification Ring -->
+  <path d="M0,175 L260,195 L700,195 L960,175" stroke="#B6A68E" stroke-width="5" stroke-dasharray="14 6 8 4" opacity="0.55"/>
+  <path d="M0,182 L260,202 L700,202 L960,182" stroke="#7D6B52" stroke-width="3" opacity="0.65"/>
+
+  <!-- Algae & Biofilm Contamination Zone on Lower Walls -->
+  <polygon points="0,210 260,220 260,415 0,600" fill="url(#biofilmBand)"/>
+  <rect x="260" y="220" width="440" height="195" fill="url(#biofilmBand)"/>
+  <polygon points="960,210 700,220 700,415 960,600" fill="url(#biofilmBand)"/>
+
+  <!-- Vertical Biofilm & Algae Drip Streaks -->
+  <g fill="#2E4E1E" opacity="0.65">
+    <path d="M290,200 C295,260 285,340 292,415 L308,415 C302,330 306,255 298,200 Z"/>
+    <path d="M345,210 C350,275 340,350 348,415 L368,415 C362,340 365,270 355,210 Z"/>
+    <path d="M420,198 C425,260 416,350 422,415 L446,415 C438,340 442,260 432,198 Z"/>
+    <path d="M515,205 C520,275 512,355 518,415 L538,415 C532,345 535,270 526,205 Z"/>
+    <path d="M610,196 C616,265 608,350 614,415 L638,415 C630,340 634,265 624,196 Z"/>
+    <path d="M665,212 C670,275 662,355 668,415 L682,415 C676,345 680,270 672,212 Z"/>
+    <!-- Side Wall Streaks -->
+    <path d="M90,205 L75,530 L102,512 L110,208 Z"/>
+    <path d="M180,212 L168,475 L192,458 L196,214 Z"/>
+    <path d="M850,205 L868,530 L842,512 L832,208 Z"/>
+    <path d="M770,212 L784,475 L762,458 L756,214 Z"/>
+  </g>
+
+  <!-- Heavy Settled Silt & Sludge Accumulation on Sump Floor -->
+  <ellipse cx="480" cy="505" rx="410" ry="95" fill="url(#sludgePool)"/>
+  <!-- Corner & Perimeter Heavy Sludge Mounds -->
+  <path d="M0,600 L0,535 Q140,465 260,402 L700,402 Q820,465 960,535 L960,600 Z" fill="#3B2915" opacity="0.9"/>
+  <path d="M80,585 Q240,480 390,465 Q530,455 690,485 Q820,510 900,590 Z" fill="#4E371D" opacity="0.85"/>
+  <!-- Murky Residual Puddle & Sediment Ripples -->
+  <ellipse cx="475" cy="515" rx="235" ry="44" fill="#654927" opacity="0.75"/>
+  <ellipse cx="485" cy="518" rx="165" ry="28" fill="#785932" opacity="0.55"/>
+  <ellipse cx="330" cy="472" rx="68" ry="15" fill="#2E1F0F" opacity="0.8"/>
+  <ellipse cx="625" cy="478" rx="75" ry="16" fill="#2E1F0F" opacity="0.8"/>
+
+  <!-- Particulate Sediment & Rust Specks -->
+  <g fill="#23170B" opacity="0.7">
+    <circle cx="280" cy="455" r="5"/><circle cx="315" cy="490" r="7"/><circle cx="380" cy="535" r="6"/>
+    <circle cx="445" cy="485" r="8"/><circle cx="520" cy="542" r="6"/><circle cx="590" cy="498" r="9"/>
+    <circle cx="655" cy="525" r="5"/><circle cx="215" cy="520" r="8"/><circle cx="745" cy="530" r="7"/>
+    <circle cx="160" cy="555" r="9"/><circle cx="805" cy="560" r="8"/><circle cx="490" cy="565" r="7"/>
+  </g>
+
+  <!-- Corroded Inlet Pipe & Stained Access Ladder (Left Wall) -->
+  <g>
+    <!-- Access Ladder with Rust & Biofilm Deposits -->
+    <line x1="145" y1="55" x2="115" y2="545" stroke="#5A4638" stroke-width="8" stroke-linecap="round"/>
+    <line x1="205" y1="75" x2="182" y2="495" stroke="#5A4638" stroke-width="8" stroke-linecap="round"/>
+    <line x1="141" y1="120" x2="201" y2="132" stroke="#6E533E" stroke-width="6" stroke-linecap="round"/>
+    <line x1="136" y1="195" x2="197" y2="204" stroke="#6E533E" stroke-width="6" stroke-linecap="round"/>
+    <line x1="131" y1="270" x2="193" y2="276" stroke="#543D2B" stroke-width="6" stroke-linecap="round"/>
+    <line x1="126" y1="345" x2="189" y2="348" stroke="#473323" stroke-width="6" stroke-linecap="round"/>
+    <line x1="121" y1="420" x2="185" y2="420" stroke="#3E2C1E" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Back Wall Suction Foot-Valve Pipe with Scale Buildup -->
+  <rect x="555" y="105" width="22" height="275" rx="6" fill="#5C5346" stroke="#3E352B" stroke-width="2"/>
+  <rect x="546" y="368" width="40" height="32" rx="6" fill="#4B3A26" stroke="#2E2215" stroke-width="2"/>
+
+  <!-- Ceiling Inspection Hatch Light Beam -->
+  <ellipse cx="480" cy="48" rx="78" ry="22" fill="#1F2422" stroke="#525B56" stroke-width="4"/>
+  <rect x="0" y="0" width="960" height="600" fill="url(#inspectionBeamBefore)"/>
+
+  <!-- Corner Perspective Framing Lines -->
+  <line x1="0" y1="0" x2="260" y2="105" stroke="#232825" stroke-width="3"/>
+  <line x1="960" y1="0" x2="700" y2="105" stroke="#232825" stroke-width="3"/>
+  <line x1="260" y1="105" x2="260" y2="415" stroke="#232825" stroke-width="2.5"/>
+  <line x1="700" y1="105" x2="700" y2="415" stroke="#232825" stroke-width="2.5"/>
+  <line x1="0" y1="600" x2="260" y2="415" stroke="#1E160E" stroke-width="3"/>
+  <line x1="960" y1="600" x2="700" y2="415" stroke="#1E160E" stroke-width="3"/>
+
+  <!-- Callout Annotations Inside Before Scene -->
+  <g font-family="Inter, sans-serif" font-weight="600" font-size="13">
+    <rect x="330" y="255" width="215" height="34" rx="17" fill="#0F172A" fill-opacity="0.84" stroke="#F59E0B" stroke-width="1.5"/>
+    <circle cx="348" cy="272" r="5" fill="#F59E0B"/>
+    <text x="362" y="277" fill="#F8FAFC">Algae &amp; Biofilm Wall Layer</text>
+
+    <rect x="355" y="485" width="250" height="34" rx="17" fill="#0F172A" fill-opacity="0.88" stroke="#EF4444" stroke-width="1.5"/>
+    <circle cx="373" cy="502" r="5" fill="#EF4444"/>
+    <text x="387" y="507" fill="#F8FAFC">Settled Silt &amp; Bottom Sludge</text>
+  </g>
+</svg>
+

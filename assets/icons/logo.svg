@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 56" fill="none">
+  <defs>
+    <linearGradient id="logoShield" x1="4" y1="4" x2="48" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B2545"/>
+      <stop offset="100%" stop-color="#133B6E"/>
+    </linearGradient>
+    <linearGradient id="logoAqua" x1="16" y1="14" x2="38" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00A8E8"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+  <path d="M26 4L7 11.8V26.5C7 39.3 15.1 50.4 26 53.4C36.9 50.4 45 39.3 45 26.5V11.8L26 4Z" fill="url(#logoShield)" stroke="#00A8E8" stroke-width="2"/>
+  <path d="M26 14.5C26 14.5 16 25.5 16 32.5C16 38 20.5 42.5 26 42.5C31.5 42.5 36 38 36 32.5C36 25.5 26 14.5 26 14.5Z" fill="url(#logoAqua)"/>
+  <path d="M19.5 33.2L24 37.8L33 28.8" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="31" font-family="Manrope, sans-serif" font-weight="800" font-size="23" letter-spacing="0.04em" fill="#0B2545">AQUA<tspan fill="#00A8E8">GUARD</tspan></text>
+  <text x="59" y="45" font-family="Inter, sans-serif" font-weight="600" font-size="9.5" letter-spacing="0.14em" fill="#475569">WATER TANK &amp; SUMP HYGIENE</text>
+</svg>
+
