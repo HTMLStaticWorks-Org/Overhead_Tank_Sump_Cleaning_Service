@@ -1,5 +1,5 @@
-/* ==========================================================================
-   AQUAGUARD — Main Frontend Application Script
+﻿/* ==========================================================================
+   AQUAGUARD  -  Main Frontend Application Script
    Handles Theme, Navbar, Search, Process Tabs, Before/After Slider,
    Pricing Filter, FAQ Accordions, Enquiry Validation & Auth Demos
    ========================================================================== */
@@ -177,7 +177,7 @@
       });
     }
 
-    // Mobile accordion dropdowns (Home ▾ and Services ▾)
+    // Mobile accordion dropdowns (Home v and Services v)
     mobileAccordions.forEach((trigger) => {
       trigger.addEventListener('click', () => {
         const parentItem = trigger.closest('.mobile-nav-item');
@@ -286,7 +286,7 @@
       url: 'dashboard.html'
     },
     {
-      title: 'Home-2 — Hygiene Standards & Process Experience',
+      title: 'Home-2  -  Hygiene Standards & Process Experience',
       desc: 'Explore our alternative homepage focused on technical cleaning protocols and hygiene standards.',
       tag: 'Page',
       url: 'home-2.html'
@@ -384,123 +384,357 @@
   }
 
   /* ------------------------------------------------------------------------
-     4. INTERACTIVE SERVICE-ADAPTIVE 6-STEP CLEANING PROCESS
+     4. INTERACTIVE SERVICE-ADAPTIVE 6-STEP CLEANING PROCESS (Differentiated per page)
      ------------------------------------------------------------------------ */
   const PROCESS_DATA = {
-    overhead: [
-      {
-        num: '01',
-        badge: 'Rooftop Assessment',
-        title: 'Initial Inspection & Setup',
-        desc: 'Technicians inspect rooftop tank structure, manhole covers, float valves, and inlet/outlet connections, then isolate supply valves to prevent sediment from entering household plumbing lines.'
-      },
-      {
-        num: '02',
-        badge: 'Controlled Drainage',
-        title: 'Water Removal & Drainage',
-        desc: 'Remaining standing water above the outlet level is drained using a portable submersible pump down to the bottom silt layer, routing discharge safely to the terrace storm drain.'
-      },
-      {
-        num: '03',
-        badge: 'Silt & Scale Extraction',
-        title: 'Sludge & Silt Removal',
-        desc: 'Accumulated borehole silt, rust flakes, and settled floor sludge are agitated and extracted using an industrial wet-vacuum extractor so heavy residue is never flushed into domestic pipes.'
-      },
-      {
-        num: '04',
-        badge: 'Surface Scrubbing',
-        title: 'Interior Surface Cleaning',
-        desc: 'For polymer/polyethylene tanks, non-abrasive rotary brushes and controlled-pressure water jets remove biofilm from ribbed rings; for RCC tanks, high-pressure rotary jets clean concrete walls.'
-      },
-      {
-        num: '05',
-        badge: 'Sanitization',
-        title: 'Appropriate Disinfection',
-        desc: 'Interior walls, ceiling underside, and floor surfaces receive a fine-mist application of measured food-grade antibacterial solution suited to the tank material (polymer or masonry).'
-      },
-      {
-        num: '06',
-        badge: 'Handover Check',
-        title: 'Final Rinse & Inspection',
-        desc: 'The tank is thoroughly rinsed with clean water, vacuumed dry of rinse residue, and visually inspected with the property owner or caretaker before re-opening the inlet valve.'
-      }
-    ],
-    sump: [
-      {
-        num: '01',
-        badge: 'Subterranean Check',
-        title: 'Access & Valve Check',
-        desc: 'Technicians inspect the underground sump manhole, check ventilation and lighting, inspect the pump suction foot-valve strainer, and turn off automated transfer pumps.'
-      },
-      {
-        num: '02',
-        badge: 'High-Flow Dewatering',
-        title: 'Submersible Dewatering',
-        desc: 'Heavy-duty submersible dewatering pumps rapidly empty standing water down to the bottom floor level through dedicated discharge hoses routed to an approved surface drainage point.'
-      },
-      {
-        num: '03',
-        badge: 'Heavy Sludge Vacuuming',
-        title: 'Sludge & Silt Extraction',
-        desc: 'Dense municipal silt, sand, and organic mud accumulated across the sump floor and corners are extracted using high-suction industrial sludge vacuum equipment.'
-      },
-      {
-        num: '04',
-        badge: 'High-Pressure Jetting',
-        title: 'Wall & Floor Jet Cleaning',
-        desc: 'High-pressure water jets remove stubborn mineral calcifications, damp algae streaks, and slimy biofilm from underground concrete walls, columns, and floor joints.'
-      },
-      {
-        num: '05',
-        badge: 'Masonry Sanitization',
-        title: 'Targeted Disinfection',
-        desc: 'Sanitizing mist is applied evenly across all concrete walls, sump floor, ladder rungs, and suction piping to address microbial surface contamination.'
-      },
-      {
-        num: '06',
-        badge: 'Clear Refill Readiness',
-        title: 'Final Flush & Verification',
-        desc: 'All loosened residue and disinfection rinse water are vacuumed out completely, the foot-valve strainer is cleaned, and the sump is verified ready for fresh water inflow.'
-      }
-    ],
-    commercial: [
-      {
-        num: '01',
-        badge: 'Site & Safety Briefing',
-        title: 'Audit & Bypass Planning',
-        desc: 'For apartments and commercial facilities with dual-compartment tanks, our crew coordinates with facility managers to isolate one compartment at a time to minimize water supply interruption.'
-      },
-      {
-        num: '02',
-        badge: 'Industrial Dewatering',
-        title: 'High-Capacity Dewatering',
-        desc: 'Multiple high-head submersible pumps empty large-volume concrete chambers while protecting pump room manifolds, pressure boosters, and sensor probes.'
-      },
-      {
-        num: '03',
-        badge: 'Mechanised Desilting',
-        title: 'Sediment & Scale Removal',
-        desc: 'Heavy sediment cakes, scale deposits, and rust buildup around baffle walls and sumps are mechanically loosened and extracted via industrial wet-vacuum units.'
-      },
-      {
-        num: '04',
-        badge: 'Rotary Jet Wash',
-        title: 'Wall & Floor Rotary Jetting',
-        desc: 'High-pressure rotary jet lances clean internal partition walls, structural columns, access ladders, and concrete floors across the entire compartment.'
-      },
-      {
-        num: '05',
-        badge: 'Contact-Time Sanitization',
-        title: 'Disinfection Protocol',
-        desc: 'Food-grade disinfectant mist is applied across all internal surfaces with appropriate contact time and ventilation before thorough clean-water rinsing.'
-      },
-      {
-        num: '06',
-        badge: 'Facility Sign-Off',
-        title: 'Visual Log & Handover',
-        desc: 'A joint visual inspection is conducted with the building supervisor or society representative, accompanied by a service completion record for facility maintenance logs.'
-      }
-    ]
+    home1: {
+      overhead: [
+        {
+          num: '01',
+          badge: 'Pre-Service Safety',
+          title: 'Inlet Isolation & Pre-Check',
+          desc: 'Technicians inspect the rooftop tank or sump surroundings, isolate the municipal and booster supply lines, and install temporary safety covers to protect domestic pipes.'
+        },
+        {
+          num: '02',
+          badge: 'Rapid Water Removal',
+          title: 'Controlled Submersible Dewatering',
+          desc: 'High-capacity submersible pumps evacuate standing water down to the floor silt line through dedicated drainage hoses, preserving terrace stormwater drains.'
+        },
+        {
+          num: '03',
+          badge: 'Floor Desilting',
+          title: 'Heavy Sludge & Silt Vacuuming',
+          desc: 'Settled clay particles, borehole iron silt, and organic sediment are agitated and extracted using an industrial high-suction slurry vacuum without clogging house drains.'
+        },
+        {
+          num: '04',
+          badge: 'Surface Cleansing',
+          title: 'High-Pressure Wall & Rib Jet Washing',
+          desc: '360-degree rotary pressure jet lances scour inner tank surfaces, corrugation rings, and corner crevices to dislodge adhered biofilm, algae, and scale buildup.'
+        },
+        {
+          num: '05',
+          badge: 'Microbial Protection',
+          title: 'Food-Grade Antibacterial Sanitization',
+          desc: 'Technicians apply a fine-mist spray of certified, food-grade antimicrobial solution across all ceiling, wall, and floor surfaces with monitored contact time.'
+        },
+        {
+          num: '06',
+          badge: 'Clean Water Refill',
+          title: 'Final Purity Rinse & Handover',
+          desc: 'The chamber is thoroughly rinsed with fresh water, vacuumed dry of residue, and visually verified with the property owner before refilling is initiated.'
+        }
+      ],
+      sump: [
+        {
+          num: '01',
+          badge: 'Domestic Sump Safety',
+          title: 'Sump Access & Pump Isolation',
+          desc: 'Technicians inspect subterranean manholes, verify ventilation, and isolate automatic level controllers to ensure zero risk to domestic booster pumps.'
+        },
+        {
+          num: '02',
+          badge: 'High-Volume Drain',
+          title: 'Fast Sump Dewatering',
+          desc: 'High-volume submersible dewatering pumps discharge old standing water cleanly to municipal storm lines without yard overflow.'
+        },
+        {
+          num: '03',
+          badge: 'Silt Slurry Extraction',
+          title: 'Heavy Floor Sludge Desilting',
+          desc: 'Dense municipal silt and settled mud cake are sucked out from the sump floor and corners using high-suction slurry extractors.'
+        },
+        {
+          num: '04',
+          badge: 'Concrete Pressure Wash',
+          title: 'Masonry Jet Wall Scouring',
+          desc: 'High-velocity water jets blast mineral calcifications and slippery biofilm off masonry walls and floor corners.'
+        },
+        {
+          num: '05',
+          badge: 'Deep Sanitization',
+          title: 'Antimicrobial Sump Fogging',
+          desc: 'A food-safe sanitizing mist is atomized throughout the sump chamber to eliminate subterranean bacteria and odor.'
+        },
+        {
+          num: '06',
+          badge: 'Household Restoration',
+          title: 'Foot-Valve Clear & Refill Handover',
+          desc: 'Technicians inspect and scrub the foot-valve strainer, verify zero rinse residue, and invite homeowner sign-off before reopening inlet valves.'
+        }
+      ],
+      commercial: [
+        {
+          num: '01',
+          badge: 'Community Water Notice',
+          title: 'Society Dual-Supply Planning',
+          desc: 'Crew leads coordinate with resident welfare associations to clean one storage compartment at a time, ensuring residents face zero tap dry-out.'
+        },
+        {
+          num: '02',
+          badge: 'Continuous Domestic Supply',
+          title: 'Staged Dual-Chamber Dewatering',
+          desc: 'Submersible pumps evacuate one compartment at a time while the facility header continues drawing from the alternate chamber.'
+        },
+        {
+          num: '03',
+          badge: 'Heavy Sediment Clearance',
+          title: 'Baffle Wall Sludge Vacuuming',
+          desc: 'Industrial slurry vacuums extract heavy mud piles and settled mineral scale gathered along partition baffle walls and floor depressions.'
+        },
+        {
+          num: '04',
+          badge: 'RCC Structural Cleansing',
+          title: 'Rotary Industrial Jet Washing',
+          desc: 'Heavy-duty rotary pressure cleaners strip slime, mineral crust, and algae off structural columns, ceiling slabs, and partition walls.'
+        },
+        {
+          num: '05',
+          badge: 'Safe Resident Water',
+          title: 'Potable Mist Surface Sanitization',
+          desc: 'Food-grade sanitizing fog is applied to all internal structural concrete surfaces with controlled dwell time before thorough flushing.'
+        },
+        {
+          num: '06',
+          badge: 'Society Handover',
+          title: 'Joint RWA Verification & Sign-Off',
+          desc: 'Joint visual sign-off with the RWA estate manager or facility supervisor, followed by a formal service completion report.'
+        }
+      ]
+    },
+    home2: {
+      overhead: [
+        {
+          num: '01',
+          badge: 'Fall Protection & Rigging',
+          title: 'Structural Roof Anchor & Rigging',
+          desc: 'Technicians establish rooftop fall-arrest anchor points, inspect ladder tie-offs, and isolate manifold balance valves across header tanks.'
+        },
+        {
+          num: '02',
+          badge: 'Fast Polymer Drainage',
+          title: 'High-Head Evacuation Pumping',
+          desc: 'Compact, non-marking submersible pumps rapidly evacuate standing volume down to the bottom sediment sump trough.'
+        },
+        {
+          num: '03',
+          badge: 'Polymer Rib Descaling',
+          title: 'Corrugated Ring Silt Extraction',
+          desc: 'Targeted wet-vacuum extraction strips settled borehole iron flakes and sediment from molded polymer reinforcement rings.'
+        },
+        {
+          num: '04',
+          badge: 'Food-Grade Liner Protection',
+          title: 'Non-Abrasive Rotary Scrubbing',
+          desc: 'Custom soft-bristle rotary scrubbers remove internal biofilm without scratching or degrading the antibacterial polyethylene inner layer.'
+        },
+        {
+          num: '05',
+          badge: 'Oxidative Sterilization',
+          title: 'Measured Hydrogen Peroxide Fogging',
+          desc: 'Precision aerosol fogging sanitizes internal air space, overflow vents, and corrugated ceilings without chemical aftertastes.'
+        },
+        {
+          num: '06',
+          badge: 'Refill Commissioning',
+          title: 'Turbidity & Pressure Test Sign-Off',
+          desc: 'After vacuuming rinse residue, inlet float valves are tested and water clarity is verified below 1.5 NTU before crew demobilisation.'
+        }
+      ],
+      sump: [
+        {
+          num: '01',
+          badge: 'Confined Space Safety',
+          title: 'Multi-Gas Audit & Ventilation',
+          desc: 'Certified technicians conduct pre-entry atmospheric gas monitoring (H2S, CO, O2 levels), establish forced-air positive ventilation, and deploy explosion-proof LED work lamps.'
+        },
+        {
+          num: '02',
+          badge: 'High-Head Evacuation',
+          title: 'Industrial Submersible Dewatering',
+          desc: 'High-flow submersible trash pumps with vortex impellers rapidly drain thousands of litres of subterranean sump water directly to designated municipal disposal outlets.'
+        },
+        {
+          num: '03',
+          badge: 'Industrial Desilting',
+          title: 'Deep-Chamber Sludge Extraction',
+          desc: 'Compact hydro-vacuum units extract heavy gravel, decomposed silt cakes, and mineral slurry from deep sump sumps and suction pit troughs.'
+        },
+        {
+          num: '04',
+          badge: 'High-Pressure Scouring',
+          title: 'Rotary Jet Mechanical Wall Scrubbing',
+          desc: 'Heavy-duty 150-bar rotary surface cleaners scour concrete baffle partitions, internal support pillars, suction manifolds, and RCC floors to bare masonry.'
+        },
+        {
+          num: '05',
+          badge: 'EPA-Compliant Disinfection',
+          title: 'Dual-Action Disinfection & Fogging',
+          desc: 'Hospital-grade, non-residual disinfectant is atomized across all interior concrete surfaces and access ladder rungs to eliminate bacterial spore clusters and fungal biofilm.'
+        },
+        {
+          num: '06',
+          badge: 'Engineering Handover',
+          title: 'Turbidity Audit & Refill Sign-Off',
+          desc: 'Technicians clean the foot-valve strainer, verify water clarity parameters below 1.5 NTU, and provide a signed digital service checklist for facility maintenance records.'
+        }
+      ],
+      commercial: [
+        {
+          num: '01',
+          badge: 'Industrial Isolation',
+          title: 'Lockout-Tagout & Bypass Engineering',
+          desc: 'LOTO procedures lock automated pump starters while temporary suction bypasses maintain uninterrupted pressure booster feeds to upper floors.'
+        },
+        {
+          num: '02',
+          badge: 'High-Volume Pumping',
+          title: 'High-Capacity Vortex Dewatering',
+          desc: 'Multiple 3-phase submersible trash pumps discharge large-scale commercial reservoirs swiftly to designated drainage manifolds.'
+        },
+        {
+          num: '03',
+          badge: 'Bulk Desilting',
+          title: 'Heavy Silt Solid Scraping & Slurry Pumping',
+          desc: 'Industrial slurry pumps extract dense borehole mud, mineral scales, and calcified crusts accumulated around pump sump pits.'
+        },
+        {
+          num: '04',
+          badge: 'Industrial Masonry Jetting',
+          title: '180-Bar Hydro-Blasting Partition Walls',
+          desc: 'High-velocity 180-bar rotary nozzles scour concrete columns, roof slabs, and baffle partitions to pristine masonry.'
+        },
+        {
+          num: '05',
+          badge: 'Heavy Microbial Knockdown',
+          title: 'Certified Chlorine-Dioxide Atomization',
+          desc: 'Engineered broad-spectrum disinfectant mist is atomized with measured ppm contact time across all compartment surfaces.'
+        },
+        {
+          num: '06',
+          badge: 'Audit Compliance',
+          title: 'Turbidimetric Log & Handover Certificate',
+          desc: 'Final NTU turbidity logs, photo-documented checklists, and formal sign-offs are submitted to facility managers.'
+        }
+      ]
+    },
+    services: {
+      overhead: [
+        {
+          num: '01',
+          badge: 'Technical Site Assessment',
+          title: 'Site Survey & Supply Lockout',
+          desc: 'Crew leads document baseline water levels, test structural integrity of manhole copings and access ladders, and apply Lockout-Tagout (LOTO) protocols on automatic booster pumps.'
+        },
+        {
+          num: '02',
+          badge: 'Managed Effluent Drainage',
+          title: 'Multi-Stage Residual Evacuation',
+          desc: 'Controlled evacuation separates reusable top-level water where practical, while bottom water is routed through inline sediment filters to prevent storm line obstruction.'
+        },
+        {
+          num: '03',
+          badge: 'Mechanical Descaling',
+          title: 'Bottom Sediment & Scale Scraping',
+          desc: 'Specialized scrapers and high-suction slurry vacuums strip settled borehole minerals, calcium scale, and rust flakes from tank joints, corners, and floor gullies.'
+        },
+        {
+          num: '04',
+          badge: '360-Degree Pressure Lance',
+          title: 'Controlled Surface Pressure Hydro-Scrub',
+          desc: 'Pressure-regulated hydro-lances (calibrated to material: 80 bar for HDPE/FRP; 140 bar for RCC) eradicate biofilm without micro-abrasion or structural liner degradation.'
+        },
+        {
+          num: '05',
+          badge: 'Biofilm Neutralization',
+          title: 'Antimicrobial Mist Contact Application',
+          desc: 'Surface disinfection is carried out using calibrated sodium hypochlorite or hydrogen peroxide-based food-safe solutions, observing exact regulatory contact times.'
+        },
+        {
+          num: '06',
+          badge: 'Digital Hygiene Audit',
+          title: 'Post-Clean Quality Assurance Sign-Off',
+          desc: 'Comprehensive inspection covers sediment clearance, water clarity, seal condition, and float valve functioning, documented in a formal digital hygiene report.'
+        }
+      ],
+      sump: [
+        {
+          num: '01',
+          badge: 'Pre-Service Sump Protocol',
+          title: 'Chamber Structural Audit & Inflow Lock',
+          desc: 'Technicians inspect underground concrete sumps for hairline leakage, check suction foot-valves, and lock inlet supply lines.'
+        },
+        {
+          num: '02',
+          badge: 'Managed Slurry Extraction',
+          title: 'Vortex Slurry Evacuation Dewatering',
+          desc: 'High-head submersible dewatering pumps evacuate residual standing water through discharge hoses routed directly to authorized gullies.'
+        },
+        {
+          num: '03',
+          badge: 'Hydro-Vacuum Extraction',
+          title: 'Heavy Silt & Rust Crust Extraction',
+          desc: 'Heavy wet-vacuum extractors pull thick silt layers and iron sediment out of sump corners, ladder bases, and suction troughs.'
+        },
+        {
+          num: '04',
+          badge: 'High-Impact Pressure Lance',
+          title: 'Masonry Rotary Jet Wall Eradication',
+          desc: 'Rotary pressure jet lances scour underground RCC walls, removing algae biofilm, mineral deposits, and damp discoloration.'
+        },
+        {
+          num: '05',
+          badge: 'Surface Decontamination',
+          title: 'Certified Broad-Spectrum Disinfection Mist',
+          desc: 'Food-safe antibacterial mist is applied across all walls, floor surfaces, and ladder rungs to neutralize microbial reservoirs.'
+        },
+        {
+          num: '06',
+          badge: 'Certified Quality Handover',
+          title: 'Clear Water Inflow Audit & Handover',
+          desc: 'The sump is thoroughly flushed, remaining rinse water is vacuumed dry, and the foot-valve strainer is tested before refilling.'
+        }
+      ],
+      commercial: [
+        {
+          num: '01',
+          badge: 'Site Isolation Protocol',
+          title: 'Multi-Compartment Isolation & Supply Bypass',
+          desc: 'Technical consultation with facility teams isolates individual storage bays while preserving fire-fighting reserves and continuous booster feeds.'
+        },
+        {
+          num: '02',
+          badge: 'Parallel Pumping Grid',
+          title: 'High-Capacity Industrial Dewatering Lines',
+          desc: 'Industrial 3-phase submersible pumps evacuate high-volume concrete reservoirs swiftly through dedicated heavy-duty hoses.'
+        },
+        {
+          num: '03',
+          badge: 'Industrial Desilting',
+          title: 'Heavy Cake Desilting & Sump Gutter Clean',
+          desc: 'Mechanical scrapers and high-flow vacuum tankers remove heavy sediment cakes, sand deposits, and pipe rust flakes.'
+        },
+        {
+          num: '04',
+          badge: 'Structural Surface Cleaning',
+          title: 'High-Pressure Concrete Rotary Hydro-Wash',
+          desc: 'High-pressure rotary hydro-cleaning sanitizes baffle walls, internal concrete pillars, and high ceiling vaults.'
+        },
+        {
+          num: '05',
+          badge: 'Microbial Compliance',
+          title: 'Controlled Contact Antimicrobial Treatment',
+          desc: 'Approved sanitization mist is atomized throughout large commercial compartments to meet municipal water storage hygiene norms.'
+        },
+        {
+          num: '06',
+          badge: 'Compliance Certification',
+          title: 'Formal Technical Hygiene Report & Photos',
+          desc: 'Comprehensive before-and-after digital photography, turbidity measurements, and signed audit sheets delivered for society records.'
+        }
+      ]
+    }
   };
 
   function initProcessTabs() {
@@ -510,8 +744,18 @@
       const grid = container.querySelector('[data-process-grid]');
       if (!tabs.length || !grid) return;
 
+      // Determine page context for distinct step sets
+      let pageKey = 'home1';
+      const path = window.location.pathname.toLowerCase();
+      if (path.includes('home-2')) {
+        pageKey = 'home2';
+      } else if (path.includes('services')) {
+        pageKey = 'services';
+      }
+
       function renderProcess(type) {
-        const steps = PROCESS_DATA[type] || PROCESS_DATA.overhead;
+        const pageGroup = PROCESS_DATA[pageKey] || PROCESS_DATA.home1;
+        const steps = pageGroup[type] || pageGroup.overhead;
         grid.innerHTML = steps
           .map(
             (s) => `
@@ -547,8 +791,8 @@
      ------------------------------------------------------------------------ */
   const BA_SCENES = {
     sump: {
-      beforeImg: 'assets/images/tank-before.svg',
-      afterImg: 'assets/images/tank-after.svg',
+      beforeImg: 'assets/images/sump-before.jpg',
+      afterImg: 'assets/images/sump-after.jpg',
       beforeAlt: 'Underground concrete water sump interior before cleaning showing settled bottom sludge and wall biofilm',
       afterAlt: 'Underground concrete water sump interior after AQUAGUARD cleaning showing sanitized walls and sludge-free floor',
       beforeTitle: 'Before Cleaning: Underground Concrete Sump',
@@ -557,8 +801,8 @@
       afterDesc: '100% dewatered, vacuum-desilted, high-pressure rotary jet scrubbed, and mist-disinfected concrete walls and floor ready for clean water storage.'
     },
     rooftop: {
-      beforeImg: 'assets/images/tank-rooftop-before.svg',
-      afterImg: 'assets/images/tank-rooftop-after.svg',
+      beforeImg: 'assets/images/tank-before.jpg',
+      afterImg: 'assets/images/tank-after.jpg',
       beforeAlt: 'Cylindrical overhead rooftop tank interior before cleaning showing borehole iron silt and rib-ring biofilm',
       afterAlt: 'Cylindrical overhead rooftop tank interior after cleaning showing spotless food-grade lining',
       beforeTitle: 'Before Cleaning: Overhead Rooftop Tank',
@@ -907,8 +1151,8 @@
           const colors = ['#DC2626', '#DC2626', '#D97706', '#00A8E8', '#0D9488'];
           const labels = [
             'Enter at least 8 characters',
-            'Weak — add numbers & mixed case',
-            'Fair — add a symbol or uppercase letter',
+            'Weak  -  add numbers & mixed case',
+            'Fair  -  add a symbol or uppercase letter',
             'Good password strength',
             'Strong password'
           ];

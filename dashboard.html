@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Dashboard — AQUAGUARD Water Tank &amp; Sump Hygiene</title>
+  <title>Customer Dashboard &mdash; AQUAGUARD Water Tank &amp; Sump Hygiene</title>
   <meta name="description" content="Manage water storage tank cleaning visits, view hygiene inspection reports, set recurring 6-month service reminders, and access invoices in the AQUAGUARD customer portal.">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,15 +65,6 @@
         <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close sidebar menu">&times;</button>
       </div>
 
-      <!-- CUSTOMER PROFILE SNIPPET -->
-      <div class="dash-sidebar__user">
-        <div class="dash-avatar">AS</div>
-        <div class="dash-user-meta">
-          <strong>Arvind Sharma</strong>
-          <span>Green Meadows RWA</span>
-        </div>
-      </div>
-
       <!-- SIDEBAR MENUS -->
       <nav class="dash-sidebar__nav" aria-label="Dashboard Tabs">
         <button type="button" class="dash-nav-link is-active" data-dash-tab="booking" aria-selected="true">
@@ -97,23 +88,8 @@
         </button>
       </nav>
 
-      <!-- SIDEBAR FOOTER WITH UTILITIES & LOGOUT BUTTON -->
+      <!-- SIDEBAR FOOTER WITH LOGOUT BUTTON -->
       <div class="dash-sidebar__footer">
-        <div class="dash-sidebar__toggles">
-          <!-- RTL Toggle Button -->
-          <button type="button" class="icon-btn rtl-toggle-btn" data-rtl-toggle aria-label="Toggle RTL layout" aria-pressed="false" title="Toggle RTL / LTR" style="flex:1;">RTL</button>
-          
-          <!-- Theme Toggle Button -->
-          <button type="button" class="icon-btn" data-theme-toggle aria-label="Switch theme" aria-pressed="false" title="Toggle Light/Dark Theme" style="flex:1;">
-            <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-            </svg>
-            <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-          </button>
-        </div>
-
         <!-- LOGOUT BUTTON -->
         <button type="button" class="dash-logout-btn" id="dashLogoutBtn" aria-label="Sign out of customer session">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -129,12 +105,42 @@
 
     <!-- MAIN DASHBOARD CONTENT AREA -->
     <main class="dash-main-area" id="dash-main">
-      
-      <!-- DASHBOARD HERO BANNER -->
+
+      <!-- DASHBOARD TOP HEADER WITH TOP-RIGHT PROFILE, RTL & THEME CONTROLS -->
+      <header class="dash-header" aria-label="Dashboard Controls and User Session">
+        <div class="dash-header__title">
+          <h2>Customer Portal</h2>
+        </div>
+        <div class="dash-header__actions">
+          <!-- RTL Toggle Button -->
+          <button type="button" class="icon-btn rtl-toggle-btn" data-rtl-toggle aria-label="Toggle RTL layout" aria-pressed="false" title="Toggle RTL / LTR">RTL</button>
+
+          <!-- Theme Toggle Button -->
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Switch theme" aria-pressed="false" title="Toggle Light/Dark Theme">
+            <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+
+          <!-- Customer Profile Chip at Top-Right Corner -->
+          <div class="dash-profile-chip" aria-label="Customer Profile Summary">
+            <div class="dash-avatar">AS</div>
+            <div class="dash-user-meta">
+              <strong>Arvind Sharma</strong>
+              <span>Green Meadows RWA</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- DASHBOARD HERO BANNER (Crisp contrast in Light & Dark Mode) -->
       <section class="dashboard-hero" aria-label="Customer Profile Summary">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; width: 100%;">
           <div>
-            <div class="eyebrow" style="color: #7DD3FC; margin-bottom: 0.35rem;">
+            <div class="eyebrow" style="margin-bottom: 0.35rem;">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
               <span>Customer Water Hygiene Portal</span>
             </div>
@@ -142,7 +148,7 @@
             <p>Green Meadows Residential Society &bull; Block A &amp; B Tanks + Main Underground Sump (40,000L Combined)</p>
           </div>
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-            <a href="contact.html" class="btn btn--secondary btn--sm" style="border-color: rgba(255,255,255,0.3); color:#FFFFFF;">Site Support Enquiry</a>
+            <a href="contact.html" class="btn btn--secondary btn--sm">Site Support Enquiry</a>
             <button type="button" class="btn btn--primary btn--sm" data-dash-tab="booking" onclick="document.querySelector('[data-dash-tab=\'booking\']').click();">
               + Book Next Visit
             </button>
@@ -210,8 +216,8 @@
             <div class="form-group">
               <label for="dashTankSelect" class="form-label">Storage Tank / Sump Unit <span class="required" aria-hidden="true">*</span></label>
               <select id="dashTankSelect" name="dashTankSelect" class="form-control" required>
-                <option value="Overhead Tank — Block A (10,000L)">Overhead Tank — Block A (10,000L RCC)</option>
-                <option value="Overhead Tank — Block B (10,000L)">Overhead Tank — Block B (10,000L RCC)</option>
+                <option value="Overhead Tank - Block A (10,000L)">Overhead Tank &mdash; Block A (10,000L RCC)</option>
+                <option value="Overhead Tank - Block B (10,000L)">Overhead Tank &mdash; Block B (10,000L RCC)</option>
                 <option value="Underground Main Sump (20,000L)">Underground Main Sump (20,000L RCC)</option>
                 <option value="Combined Block A+B Tanks &amp; Sump" selected>Combined Block A+B Tanks &amp; Sump (40,000L Total)</option>
               </select>
@@ -234,9 +240,9 @@
             <div class="form-group">
               <label for="dashSlotSelect" class="form-label">Time Window <span class="required" aria-hidden="true">*</span></label>
               <select id="dashSlotSelect" name="dashSlotSelect" class="form-control" required>
-                <option value="Morning Slot (08:30 AM – 12:30 PM)" selected>Morning Slot (08:30 AM – 12:30 PM)</option>
-                <option value="Afternoon Slot (01:00 PM – 05:00 PM)">Afternoon Slot (01:00 PM – 05:00 PM)</option>
-                <option value="Weekend Priority Slot (09:00 AM – 01:00 PM)">Weekend Priority Slot (09:00 AM – 01:00 PM)</option>
+                <option value="Morning Slot (08:30 AM - 12:30 PM)" selected>Morning Slot (08:30 AM &ndash; 12:30 PM)</option>
+                <option value="Afternoon Slot (01:00 PM - 05:00 PM)">Afternoon Slot (01:00 PM &ndash; 05:00 PM)</option>
+                <option value="Weekend Priority Slot (09:00 AM - 01:00 PM)">Weekend Priority Slot (09:00 AM &ndash; 01:00 PM)</option>
               </select>
             </div>
           </div>
@@ -314,7 +320,7 @@
         <div class="report-card-grid">
           <!-- Report Card 1 -->
           <article class="report-card">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+            <div class="report-card-header">
               <div>
                 <span class="status-badge status-badge--success" style="margin-bottom: 6px;">Certified Clean</span>
                 <h3 style="font-size: 1.15rem; margin-bottom: 3px;">Block A &amp; B Overhead Tanks</h3>
@@ -357,7 +363,7 @@
 
           <!-- Report Card 2 -->
           <article class="report-card">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+            <div class="report-card-header">
               <div>
                 <span class="status-badge status-badge--success" style="margin-bottom: 6px;">Certified Clean</span>
                 <h3 style="font-size: 1.15rem; margin-bottom: 3px;">Main Underground Sump (20kL)</h3>
