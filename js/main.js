@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    AQUAGUARD  -  Main Frontend Application Script
    Handles Theme, Navbar, Search, Process Tabs, Before/After Slider,
    Pricing Filter, FAQ Accordions, Enquiry Validation & Auth Demos
@@ -623,114 +623,114 @@
       overhead: [
         {
           num: '01',
-          badge: 'Technical Site Assessment',
-          title: 'Site Survey & Supply Lockout',
+          badge: 'Site Assessment',
+          title: 'Site Survey & Lockout',
           desc: 'Crew leads document baseline water levels, test structural integrity of manhole copings and access ladders, and apply Lockout-Tagout (LOTO) protocols on automatic booster pumps.'
         },
         {
           num: '02',
-          badge: 'Managed Effluent Drainage',
-          title: 'Multi-Stage Residual Evacuation',
+          badge: 'Effluent Drainage',
+          title: 'Residual Dewatering',
           desc: 'Controlled evacuation separates reusable top-level water where practical, while bottom water is routed through inline sediment filters to prevent storm line obstruction.'
         },
         {
           num: '03',
           badge: 'Mechanical Descaling',
-          title: 'Bottom Sediment & Scale Scraping',
+          title: 'Sludge & Scale Scraping',
           desc: 'Specialized scrapers and high-suction slurry vacuums strip settled borehole minerals, calcium scale, and rust flakes from tank joints, corners, and floor gullies.'
         },
         {
           num: '04',
-          badge: '360-Degree Pressure Lance',
-          title: 'Controlled Surface Pressure Hydro-Scrub',
+          badge: 'Pressure Jetting',
+          title: 'Pressure Hydro-Scrub',
           desc: 'Pressure-regulated hydro-lances (calibrated to material: 80 bar for HDPE/FRP; 140 bar for RCC) eradicate biofilm without micro-abrasion or structural liner degradation.'
         },
         {
           num: '05',
-          badge: 'Biofilm Neutralization',
-          title: 'Antimicrobial Mist Contact Application',
+          badge: 'Biofilm Mist',
+          title: 'Antimicrobial Mist',
           desc: 'Surface disinfection is carried out using calibrated sodium hypochlorite or hydrogen peroxide-based food-safe solutions, observing exact regulatory contact times.'
         },
         {
           num: '06',
-          badge: 'Digital Hygiene Audit',
-          title: 'Post-Clean Quality Assurance Sign-Off',
+          badge: 'Quality Audit',
+          title: 'Hygiene Audit & Sign-Off',
           desc: 'Comprehensive inspection covers sediment clearance, water clarity, seal condition, and float valve functioning, documented in a formal digital hygiene report.'
         }
       ],
       sump: [
         {
           num: '01',
-          badge: 'Pre-Service Sump Protocol',
-          title: 'Chamber Structural Audit & Inflow Lock',
+          badge: 'Pre-Check Protocol',
+          title: 'Chamber Structural Audit',
           desc: 'Technicians inspect underground concrete sumps for hairline leakage, check suction foot-valves, and lock inlet supply lines.'
         },
         {
           num: '02',
-          badge: 'Managed Slurry Extraction',
-          title: 'Vortex Slurry Evacuation Dewatering',
+          badge: 'Slurry Evacuation',
+          title: 'Submersible Dewatering',
           desc: 'High-head submersible dewatering pumps evacuate residual standing water through discharge hoses routed directly to authorized gullies.'
         },
         {
           num: '03',
-          badge: 'Hydro-Vacuum Extraction',
-          title: 'Heavy Silt & Rust Crust Extraction',
+          badge: 'Vacuum Desilting',
+          title: 'Heavy Silt Extraction',
           desc: 'Heavy wet-vacuum extractors pull thick silt layers and iron sediment out of sump corners, ladder bases, and suction troughs.'
         },
         {
           num: '04',
-          badge: 'High-Impact Pressure Lance',
-          title: 'Masonry Rotary Jet Wall Eradication',
+          badge: 'Rotary Jetting',
+          title: 'Masonry Jet Washing',
           desc: 'Rotary pressure jet lances scour underground RCC walls, removing algae biofilm, mineral deposits, and damp discoloration.'
         },
         {
           num: '05',
-          badge: 'Surface Decontamination',
-          title: 'Certified Broad-Spectrum Disinfection Mist',
+          badge: 'Decontamination',
+          title: 'Certified Disinfection Mist',
           desc: 'Food-safe antibacterial mist is applied across all walls, floor surfaces, and ladder rungs to neutralize microbial reservoirs.'
         },
         {
           num: '06',
-          badge: 'Certified Quality Handover',
-          title: 'Clear Water Inflow Audit & Handover',
+          badge: 'Quality Handover',
+          title: 'Clear Water Audit & Refill',
           desc: 'The sump is thoroughly flushed, remaining rinse water is vacuumed dry, and the foot-valve strainer is tested before refilling.'
         }
       ],
       commercial: [
         {
           num: '01',
-          badge: 'Site Isolation Protocol',
-          title: 'Multi-Compartment Isolation & Supply Bypass',
+          badge: 'Site Isolation',
+          title: 'Bay Isolation & Bypass',
           desc: 'Technical consultation with facility teams isolates individual storage bays while preserving fire-fighting reserves and continuous booster feeds.'
         },
         {
           num: '02',
-          badge: 'Parallel Pumping Grid',
-          title: 'High-Capacity Industrial Dewatering Lines',
+          badge: 'Industrial Pumping',
+          title: 'High-Capacity Dewatering',
           desc: 'Industrial 3-phase submersible pumps evacuate high-volume concrete reservoirs swiftly through dedicated heavy-duty hoses.'
         },
         {
           num: '03',
-          badge: 'Industrial Desilting',
-          title: 'Heavy Cake Desilting & Sump Gutter Clean',
+          badge: 'Heavy Desilting',
+          title: 'Sludge Gutter Desilting',
           desc: 'Mechanical scrapers and high-flow vacuum tankers remove heavy sediment cakes, sand deposits, and pipe rust flakes.'
         },
         {
           num: '04',
-          badge: 'Structural Surface Cleaning',
-          title: 'High-Pressure Concrete Rotary Hydro-Wash',
+          badge: 'Concrete Scouring',
+          title: 'High-Pressure Rotary Wash',
           desc: 'High-pressure rotary hydro-cleaning sanitizes baffle walls, internal concrete pillars, and high ceiling vaults.'
         },
         {
           num: '05',
-          badge: 'Microbial Compliance',
-          title: 'Controlled Contact Antimicrobial Treatment',
+          badge: 'Antimicrobial Mist',
+          title: 'Sanitization Mist Spray',
           desc: 'Approved sanitization mist is atomized throughout large commercial compartments to meet municipal water storage hygiene norms.'
         },
         {
           num: '06',
-          badge: 'Compliance Certification',
-          title: 'Formal Technical Hygiene Report & Photos',
+          badge: 'Compliance Audit',
+          title: 'Technical Hygiene Report',
           desc: 'Comprehensive before-and-after digital photography, turbidity measurements, and signed audit sheets delivered for society records.'
         }
       ]
